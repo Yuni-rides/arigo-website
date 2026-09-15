@@ -2,7 +2,7 @@ import { Reveal } from "@/components/motion";
 import { Container } from "@/components/ui";
 
 import { coreValues, coreValuesIntro } from "../content/core-values.content";
-import { ValueCard } from "./value-card";
+import { ValueCardStack } from "./value-card-stack";
 
 export function CoreValuesSection() {
   return (
@@ -18,11 +18,7 @@ export function CoreValuesSection() {
         </Reveal>
 
         <div className="mt-10 sm:mt-14">
-          {coreValues.map((value, i) => (
-            <div key={value.id} style={{ zIndex: i + 1 }} className="sticky top-24 pb-10 last:pb-0 sm:top-28">
-              <ValueCard {...value} />
-            </div>
-          ))}
+          <ValueCardStack values={coreValues} />
         </div>
       </Container>
     </section>
