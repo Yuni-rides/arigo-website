@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold tracking-tight text-brand-secondary;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-brand-primary text-brand-primary-foreground;
+  }
+
+  :focus-visible {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background outline-none;
+  }
+}
+
+@layer utilities {
+  /* Consistent horizontal page gutter used by the Container component */
+  .page-gutter {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+}
