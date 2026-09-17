@@ -95,6 +95,11 @@ export function ValueCardStack({ values }: { values: CoreValue[] }) {
           laterProgress={progress.slice(i + 1)}
         />
       ))}
+      {/*
+        Real spacer (not padding): sticky children can only pin inside the parent
+        CONTENT box, so this gives the last card room to settle before the stack leaves.
+      */}
+      <div aria-hidden className="h-[35vh]" />
     </div>
   );
 }

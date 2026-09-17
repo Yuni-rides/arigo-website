@@ -47,3 +47,71 @@ export interface CoreValue {
   image: { src: string; alt: string };
   cta: { label: string; href: string };
 }
+
+export interface WhyChoosingContent {
+  title: string;
+  highlight: string;
+  /** Paragraph parts; `{brand}` is replaced by the brand name in accent colour. */
+  paragraphs: string[];
+  images: { front: { src: string; alt: string }; back: { src: string; alt: string } };
+}
+
+export interface AppStep {
+  title: string;
+  description: string;
+}
+
+export interface AppShowcase {
+  id: string;
+  /** e.g. "Arigo Driver app" - rendered in brand colour after "Download" */
+  name: string;
+  steps: AppStep[];
+  image: { src: string; alt: string };
+  /** URL encoded in the QR code (usually a smart link that picks the right store). */
+  downloadUrl: string;
+  stores: { googlePlay: string; appStore: string };
+}
+
+export interface DownloadAppContent {
+  titlePrefix: string;
+  downloadHeading: string;
+  downloadText: string;
+  apps: AppShowcase[];
+}
+
+export interface AudienceItem {
+  id: string;
+  title: string;
+  /** Use `{brand}` for the accent-coloured brand name. */
+  description: string;
+  image: { src: string; alt: string };
+  /** Optional closing prompt + CTA (Figma shows it on the last row only). */
+  cta?: { prompt: string; label: string; href: string };
+}
+
+export interface Story {
+  id: string;
+  /** Headline lines, rendered one per line. */
+  lines: string[];
+  image: { src: string; alt: string };
+  videoUrl: string;
+}
+
+export interface StoriesContent {
+  eyebrow: string;
+  watchLabel: string;
+  stories: Story[];
+}
+
+export interface TrustedPartner {
+  id: string;
+  name: string;
+  logo: { src: string; width: number; height: number };
+}
+
+export interface TrustedContent {
+  /** Use `{highlight}` for the accent-coloured word. */
+  heading: string;
+  highlight: string;
+  partners: TrustedPartner[];
+}

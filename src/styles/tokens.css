@@ -53,6 +53,13 @@
   /* ---- Motion ---- */
   --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
   --animate-fade-up: fade-up 0.6s var(--ease-brand) both;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 
   @keyframes fade-up {
     from {

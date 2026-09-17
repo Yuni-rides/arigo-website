@@ -5,7 +5,6 @@ import type { WithChildren, WithClassName } from "@/types";
 
 type ContainerProps = WithChildren<WithClassName<{ as?: ElementType; size?: "content" | "narrow" }>>;
 
-/** Centred, gutter-padded layout wrapper. */
 export function Container({ as: Tag = "div", size = "content", className, children }: ContainerProps) {
   return (
     <Tag

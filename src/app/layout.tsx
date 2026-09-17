@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
-/* ---------- Fonts: self-hosted by next/font, exposed as CSS vars for Tailwind tokens ---------- */
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

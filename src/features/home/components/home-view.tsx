@@ -1,17 +1,21 @@
+import { AudiencesSection } from "./audiences-section";
 import { CoreValuesSection } from "./core-values-section";
-import { CtaSection } from "./cta-section";
-import { FeaturesSection } from "./features-section";
+import { DownloadAppSection } from "./download-app-section";
 import { HeroSection } from "./hero-section";
-import { StatsSection } from "./stats-section";
+import { StoriesSection } from "./stories-section";
+import { TrustedSection } from "./trusted-section";
+import { WhyChoosingSection } from "./why-choosing-section";
 
 export function HomeView() {
   return (
     <>
       <HeroSection />
+      <TrustedSection />
       <CoreValuesSection />
-      <FeaturesSection />
-      <StatsSection />
-      <CtaSection />
+      <WhyChoosingSection />
+      <AudiencesSection />
+      <StoriesSection />
+      <DownloadAppSection />
     </>
   );
 }
