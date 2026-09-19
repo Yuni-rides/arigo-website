@@ -115,3 +115,22 @@ export interface TrustedContent {
   highlight: string;
   partners: TrustedPartner[];
 }
+
+export interface ServiceArea {
+  id: string;
+  state: string;
+  cities: string[];
+  href: string;
+  /** White-on-transparent state silhouette; recoloured via CSS mask. */
+  map: { src: string; width: number; height: number };
+}
+
+export interface AreasContent {
+  title: string;
+  /** Portion of the title that carries the underline. */
+  titleUnderlined: string;
+  description: string;
+  moreLabel: string;
+  moreHref: string;
+  areas: ServiceArea[];
+}

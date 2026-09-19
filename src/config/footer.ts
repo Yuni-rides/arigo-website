@@ -8,8 +8,8 @@ export const footerColumns: { heading: string; items: NavItem[] }[] = [
     heading: "Quick Links",
     items: [
       { label: "Home", href: "/" },
-      { label: "Services", href: "/#services" },
-      { label: "About", href: "/#about" },
+      { label: "Services", href: "/services" },
+      { label: "About", href: "/about-us" },
       { label: "Become a Driver", href: "/#drivers" },
       { label: "Blogs", href: "/blog" },
       { label: "Contact us", href: "/#contact" },
