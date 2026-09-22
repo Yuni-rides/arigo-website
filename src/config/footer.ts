@@ -12,7 +12,7 @@ export const footerColumns: { heading: string; items: NavItem[] }[] = [
       { label: "About", href: "/about-us" },
       { label: "Become a Driver", href: "/#drivers" },
       { label: "Blogs", href: "/blog" },
-      { label: "Contact us", href: "/#contact" },
+      { label: "Contact us", href: "/contact-us" },
     ],
   },
   {

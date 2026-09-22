@@ -39,9 +39,6 @@ type ButtonAsLink = ButtonBaseProps & { href: string; external?: boolean };
 
 export type ButtonProps = ButtonAsButton | ButtonAsLink;
 
-/**
- * Brand button. Renders a Next Link when `href` is supplied, otherwise a native button.
- */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   { className, variant, size, ...props },
   ref,

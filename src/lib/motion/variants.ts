@@ -1,6 +1,5 @@
 import type { Transition, Variants } from "framer-motion";
 
-/** Shared easing so all brand motion feels consistent. */
 export const brandEase = [0.22, 1, 0.36, 1] as const;
 
 export const transitions = {
@@ -23,7 +22,6 @@ export const scaleIn: Variants = {
   visible: { opacity: 1, scale: 1, transition: transitions.base },
 };
 
-/** Parent variant: staggers any child that uses fadeUp / fadeIn / scaleIn. */
 export const staggerContainer = (stagger = 0.08, delay = 0): Variants => ({
   hidden: {},
   visible: { transition: { staggerChildren: stagger, delayChildren: delay } },

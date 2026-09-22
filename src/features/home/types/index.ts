@@ -134,3 +134,17 @@ export interface AreasContent {
   moreHref: string;
   areas: ServiceArea[];
 }
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  location: string;
+  quote: string;
+  /** 1-5 */
+  rating: number;
+}
+
+export interface TestimonialsContent {
+  title: string;
+  items: Testimonial[];
+}

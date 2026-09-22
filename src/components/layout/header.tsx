@@ -12,10 +12,6 @@ import { useScrolled } from "@/hooks";
 import { transitions } from "@/lib/motion/variants";
 import { cn } from "@/lib/utils";
 
-/**
- * Floating glass navbar (Figma: centred pill over the hero).
- * Logo | "Request a ride" | hamburger. The hamburger opens the full menu at every breakpoint.
- */
 export function Header() {
   const [open, setOpen] = useState(false);
   const scrolled = useScrolled(24);

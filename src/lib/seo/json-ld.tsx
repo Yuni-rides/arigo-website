@@ -2,12 +2,10 @@ import { siteConfig } from "@/config/site";
 
 type JsonLdProps = { data: Record<string, unknown> };
 
-/** Renders a JSON-LD script tag. Place inside a page or layout body. */
 export function JsonLd({ data }: JsonLdProps) {
   return (
     <script
       type="application/ld+json"
-      // JSON-LD must be raw JSON; "<" is escaped to prevent script injection.
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\u003c") }}
     />
   );

@@ -5,18 +5,12 @@ import { siteConfig } from "@/config/site";
 interface CreateMetadataOptions {
   title?: string;
   description?: string;
-  /** Site-relative path, e.g. "/about". Used for canonical + OG url. */
   path?: string;
-  /** Site-relative or absolute image URL. Defaults to the generated OG image. */
   image?: string;
   keywords?: string[];
   noIndex?: boolean;
 }
 
-/**
- * Builds a complete, consistent Metadata object for a route.
- * Root layout supplies `metadataBase`, so relative paths resolve correctly.
- */
 export function createMetadata({
   title,
   description = siteConfig.description,
@@ -28,7 +22,6 @@ export function createMetadata({
   const resolvedTitle = title ?? siteConfig.title;
 
   return {
-    // Omit the key entirely when unset so the root layout `title.default` is inherited.
     ...(title ? { title } : {}),
     description,
     keywords,
