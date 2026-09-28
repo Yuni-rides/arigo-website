@@ -12,6 +12,7 @@ const staticRoutes: {
   { path: "/about-us", priority: 0.8, changeFrequency: "monthly" },
   { path: "/contact-us", priority: 0.8, changeFrequency: "monthly" },
   { path: "/careers", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/drivers", priority: 0.8, changeFrequency: "monthly" },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
