@@ -121,8 +121,8 @@ export interface ServiceArea {
   state: string;
   cities: string[];
   href: string;
-  /** White-on-transparent state silhouette; recoloured via CSS mask. */
-  map: { src: string; width: number; height: number };
+  /** City photo shown at the top of the card. */
+  photo: { src: string; width: number; height: number };
 }
 
 export interface AreasContent {
@@ -130,8 +130,8 @@ export interface AreasContent {
   /** Portion of the title that carries the underline. */
   titleUnderlined: string;
   description: string;
-  moreLabel: string;
-  moreHref: string;
+  /** Label of the per-card link. */
+  cardCtaLabel: string;
   areas: ServiceArea[];
 }
 
@@ -147,4 +147,15 @@ export interface Testimonial {
 export interface TestimonialsContent {
   title: string;
   items: Testimonial[];
+}
+
+export interface Trip {
+  id: string;
+  label: string;
+  image: { src: string; alt: string };
+}
+
+export interface TripsContent {
+  title: string;
+  trips: Trip[];
 }

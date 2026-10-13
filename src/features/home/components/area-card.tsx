@@ -1,59 +1,58 @@
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import Image from "next/image";
+
+import { Button } from "@/components/ui";
 
 import type { ServiceArea } from "../types";
 
-/**
- * State card. Default: orange card, white map, white text.
- * Hover: white card, navy map with a blue offset shadow, navy text, filled arrow.
- * Map + icon are CSS masks so their colour is driven by classes, not extra image files.
- */
-export function AreaCard({ state, cities, href, map }: ServiceArea) {
-  const mapMask = { maskImage: `url(${map.src})`, WebkitMaskImage: `url(${map.src})` };
-  const iconMask = { maskImage: "url(/images/ArigoIcon.png)", WebkitMaskImage: "url(/images/ArigoIcon.png)" };
+/** Photo crop from the design - inline so a missing utility class can never collapse it. */
+const PHOTO_CROP = { aspectRatio: "314 / 172" };
 
+/**
+ * State card (Figma):
+ *  - city photo at the top of the card
+ *  - a white panel with rounded top corners pulled up over the photo
+ *  - a navy name plate sitting on the panel's top edge, flush with the card's left
+ *  - served cities in three columns, each pin inside a soft peach circle
+ */
+export function AreaCard({ state, cities, href, photo, ctaLabel }: ServiceArea & { ctaLabel: string }) {
   return (
-    <Link
-      href={href}
-      className="group relative flex items-center gap-4 rounded-2xl border border-white/70 bg-transparent py-6 pr-6 pl-4 text-white transition-[background-color,color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-brand-secondary hover:shadow-[0_20px_40px_-16px_rgb(0_0_0/0.45)] sm:gap-6 sm:pl-6"
-    >
-      {/* Map (pokes slightly outside the card on the left, as in Figma) */}
-      <div className="relative -ml-8 aspect-square w-[92px] shrink-0 sm:-ml-10 sm:w-[104px]">
-        <div
-          aria-hidden
-          style={mapMask}
-          className="absolute inset-0 -translate-x-1 -translate-y-1 bg-[#2E6BB5] [mask-size:contain] [mask-position:center] [mask-repeat:no-repeat] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    <article className="flex h-full flex-col overflow-hidden rounded-[24px] bg-white text-brand-secondary shadow-[0_18px_40px_-18px_rgb(21_29_50/0.45)]">
+      <div className="relative w-full shrink-0" style={PHOTO_CROP}>
+        <Image
+          src={photo.src}
+          alt={`${state} skyline`}
+          fill
+          sizes="(min-width: 640px) 45vw, 90vw"
+          className="object-cover"
         />
-        <div
-          aria-hidden
-          style={mapMask}
-          className="absolute inset-0 bg-white [mask-size:contain] [mask-position:center] [mask-repeat:no-repeat] transition-colors duration-300 group-hover:bg-brand-secondary"
-        />
-        <div
-          aria-hidden
-          style={iconMask}
-          className="absolute top-1/2 left-1/2 size-7 -translate-x-1/2 -translate-y-1/2 bg-brand-secondary [mask-size:contain] [mask-position:center] [mask-repeat:no-repeat] transition-colors duration-300 group-hover:bg-white"
-        />
+
+        {/* Name plate: its bottom slides under the white panel, so only the top shows */}
+        <div className="absolute bottom-0 left-0 rounded-t-[24px] bg-brand-secondary pt-[18px] pr-14 pb-[42px] pl-10">
+          <h3 className="text-[26px] leading-none font-medium text-white sm:text-[38px]">{state}</h3>
+        </div>
       </div>
 
-      <div className="min-w-0 flex-1">
-        <h3 className="text-xl font-medium text-current sm:text-2xl">{state}</h3>
-        <ul className="mt-2 grid grid-cols-2 gap-x-4 gap-y-0.5 text-[11px] text-current/85">
+      {/* White panel rides up over the photo so its rounded top corners show the city behind them */}
+      <div className="relative -mt-6 flex flex-1 flex-col rounded-t-[24px] bg-white px-7 pt-10 pb-6">
+        <ul className="grid grid-cols-3 gap-x-3 gap-y-6">
           {cities.map((city, i) => (
-            <li key={`${city}-${i}`} className="flex items-center gap-1.5">
-              <span aria-hidden className="size-0.5 rounded-full bg-current" />
+            <li key={`${city}-${i}`} className="flex items-center gap-3 text-[18px]">
+              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-brand-primary-soft">
+                <MapPin className="size-5 fill-brand-primary text-white" aria-hidden />
+              </span>
               {city}
             </li>
           ))}
         </ul>
-      </div>
 
-      <span
-        aria-hidden
-        className="absolute right-4 bottom-4 grid size-7 place-items-center rounded-md border border-current transition-colors duration-300 group-hover:border-brand-primary group-hover:bg-brand-primary group-hover:text-white"
-      >
-        <ArrowUpRight className="size-4" />
-      </span>
-    </Link>
+        <div className="mt-auto pt-8">
+          <Button href={href} variant="secondary" className="h-[68px] rounded-[16px] px-12 text-[18px]">
+            {ctaLabel}
+            <ArrowUpRight className="size-5" />
+          </Button>
+        </div>
+      </div>
+    </article>
   );
 }
