@@ -159,3 +159,42 @@ export interface TripsContent {
   title: string;
   trips: Trip[];
 }
+
+export interface CareSolution {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  /** Colour of the card title and its button. */
+  accent: "primary" | "secondary";
+  cta: { label: string; href: string };
+  image: { src: string; alt: string };
+}
+
+export interface CareSolutionsContent {
+  title: string;
+  description: string;
+  solutions: CareSolution[];
+}
+
+export interface CollagePhoto {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  /** Bounds of the real photo inside the asset, which ships with a white frame. */
+  content: { x: number; y: number; width: number; height: number };
+}
+
+export interface PatientPromiseContent {
+  title: string;
+  cta: { label: string; href: string };
+  /** Collage photos: column one (top, bottom) then column two (top, bottom). */
+  photos: CollagePhoto[];
+}
+
+export interface RequestCtaContent {
+  title: string;
+  cta: { label: string; href: string };
+  photo: CollagePhoto;
+}

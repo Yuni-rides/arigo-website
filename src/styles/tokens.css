@@ -26,6 +26,10 @@
 
   --color-brand-tertiary-soft: #f2f2f2;
 
+  /* Muted slate used for the secondary card button (Care Solutions) */
+  --color-brand-slate: #4a5166;
+  --color-brand-slate-hover: #3b4152;
+
   /* ---- Semantic surface tokens ---- */
   --color-background: #ffffff;
   --color-foreground: #151d32;
