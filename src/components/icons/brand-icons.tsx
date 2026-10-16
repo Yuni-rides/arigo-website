@@ -58,3 +58,11 @@ export function GooglePlayIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function XIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M17.53 3h3.07l-6.7 7.66L21.8 21h-6.17l-4.83-6.32L5.27 21H2.2l7.17-8.2L2.2 3h6.32l4.37 5.78L17.53 3Zm-1.08 16.17h1.7L7.63 4.74H5.8l10.65 14.43Z" />
+    </svg>
+  );
+}

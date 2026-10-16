@@ -1,3 +1,4 @@
+import { BlogShowcase } from "@/features/blog";
 import { BookingSection } from "@/features/booking";
 import { AreasSection } from "./areas-section";
 import { AudiencesSection } from "./audiences-section";
@@ -20,6 +21,7 @@ export function HomeView() {
       <TripsSection />
       <RequestCtaSection />
       <AreasSection />
+      <BlogShowcase />
       <BookingSection />
       <WhyChoosingSection />
       <CareSolutionsSection />
