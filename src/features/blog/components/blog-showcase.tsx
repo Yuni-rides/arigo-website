@@ -80,29 +80,27 @@ export function BlogShowcase() {
           <span aria-hidden className="absolute inset-0" style={PANEL_WASH} />
 
           <div className="relative flex h-full flex-col px-6 pt-8 sm:px-10 sm:pt-10">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active.id}
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={transitions.fast}
-                className="max-w-[54%]"
-              >
-                <h3 className="text-xl leading-[1.25] font-semibold text-white sm:text-3xl lg:text-[52px]">
-                  {active.title}
-                </h3>
+            {/* Keyed, fade-in only so the copy never blanks between slides */}
+            <motion.div
+              key={active.id}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={transitions.fast}
+              className="max-w-[54%]"
+            >
+              <h3 className="text-xl leading-[1.25] font-semibold text-white sm:text-3xl lg:text-[52px]">
+                {active.title}
+              </h3>
 
-                <span className="mt-5 inline-flex items-center gap-1.5 rounded-[5px] bg-brand-secondary px-2.5 py-1 text-[11px] font-medium text-white">
-                  <CalendarDays className="size-3" aria-hidden />
-                  {active.date}
-                </span>
+              <span className="mt-5 inline-flex items-center gap-1.5 rounded-[5px] bg-brand-secondary px-2.5 py-1 text-[11px] font-medium text-white">
+                <CalendarDays className="size-3" aria-hidden />
+                {active.date}
+              </span>
 
-                <p className="mt-4 hidden max-w-[80%] text-[15px] leading-relaxed text-white/80 sm:block lg:text-[17px]">
-                  {active.excerpt}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+              <p className="mt-4 hidden max-w-[80%] text-[15px] leading-relaxed text-white/80 sm:block lg:text-[17px]">
+                {active.excerpt}
+              </p>
+            </motion.div>
           </div>
 
           <div className="absolute inset-x-0 bottom-0 px-3 pb-3 sm:px-6 sm:pb-6">
