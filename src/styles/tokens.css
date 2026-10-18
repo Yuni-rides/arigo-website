@@ -59,6 +59,15 @@
   --animate-fade-up: fade-up 0.6s var(--ease-brand) both;
   --animate-marquee: marquee 40s linear infinite;
 
+  --color-driver-cta-background: #ffc6bd;
+  --color-driver-cta-heading: #363636;
+  --color-driver-cta-description: #626271;
+
+  --radius-driver-cta: 1.75rem;
+  --radius-driver-cta-button: 0.75rem;
+
+  --shadow-driver-cta: 0 7px 14px rgb(0 0 0 / 0.12);
+
   @keyframes marquee {
     to {
       transform: translateX(-50%);

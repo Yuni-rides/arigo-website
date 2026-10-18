@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { Reveal } from "@/components/motion";
 import { Container } from "@/components/ui";
-
 import { bookingContent } from "../content/booking.content";
 import { BookingForm } from "./booking-form";
 
@@ -13,7 +12,6 @@ export function BookingSection() {
     <section id="request" className="scroll-mt-24 bg-background py-24">
       <Container>
         <Reveal className="mx-auto max-w-6xl overflow-hidden rounded-[16px] bg-white shadow-[0_20px_50px_-24px_rgb(21_29_50/0.45)]">
-          {/* Orange header band */}
           <div className="relative flex items-center bg-[#DB6650] px-7 py-7 sm:px-10">
             <div className="relative z-10 max-w-md">
               <h2 className="text-2xl font-bold text-white sm:text-[28px]">{title}</h2>
@@ -29,7 +27,6 @@ export function BookingSection() {
             />
           </div>
 
-          {/* Photo + form */}
           <div className="grid lg:grid-cols-[minmax(0,36%)_minmax(0,1fr)]">
             <div className="relative hidden min-h-[520px] lg:block">
               <Image

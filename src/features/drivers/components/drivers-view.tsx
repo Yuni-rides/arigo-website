@@ -1,12 +1,17 @@
 import { DriverToolsSection } from "./driver-tools-section";
+import { DriversCareCta } from "./drivers-care-cta";
+import { DriversExperienceSection } from "./drivers-experience-section";
 import { DriversHero } from "./drivers-hero";
+import { DriversTestimonials } from "./drivers-testimonials";
 
-/** Composes the /drivers page. Add further sections below the hero as they are designed. */
 export function DriversView() {
   return (
     <>
       <DriversHero />
       <DriverToolsSection />
+      <DriversExperienceSection />
+      <DriversTestimonials />
+      <DriversCareCta />
     </>
   );
 }

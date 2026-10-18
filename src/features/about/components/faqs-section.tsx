@@ -3,11 +3,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
-
 import { Button, Container } from "@/components/ui";
 import { transitions } from "@/lib/motion/variants";
 import { cn } from "@/lib/utils";
-
 import { faqsContent } from "../content/faqs.content";
 
 export function FaqsSection() {
@@ -15,7 +13,7 @@ export function FaqsSection() {
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section id="faqs" className="scroll-mt-24 bg-brand-primary/25 py-16 sm:py-20">
+    <section id="faqs" className="scroll-mt-24 bg-[#FFC6BC] py-16 sm:py-20">
       <Container>
         <h2 className="text-center text-3xl font-medium text-brand-secondary sm:text-[44px]">
           {title}{" "}
