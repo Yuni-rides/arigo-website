@@ -5,6 +5,7 @@ import { useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 
 import { contactSupportContent } from "../content/contact-support.content";
+import { submitContact } from "../services/submit-contact";
 
 const fieldBase =
   "w-full rounded-md border border-brand-secondary/40 bg-white px-3 text-xs text-brand-secondary placeholder:text-brand-tertiary/70 focus:border-brand-primary focus:outline-none";
@@ -12,12 +13,22 @@ const fieldBase =
 export function ContactForm() {
   const { fields, submitLabel } = contactSupportContent;
   const [values, setValues] = useState<Record<string, string>>({});
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [error, setError] = useState("");
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // TODO: post to the contact endpoint through src/services once it exists.
-    setSent(true);
+    setStatus("sending");
+    setError("");
+
+    try {
+      await submitContact(values);
+      setValues({});
+      setStatus("sent");
+    } catch (cause) {
+      setStatus("idle");
+      setError(cause instanceof Error ? cause.message : "Something went wrong. Please try again.");
+    }
   }
 
   return (
@@ -52,10 +63,26 @@ export function ContactForm() {
       <div className="pt-1 sm:col-span-2">
         <button
           type="submit"
-          className="h-12 w-full cursor-pointer rounded-md bg-brand-secondary text-xs font-medium text-white shadow-[0_8px_16px_-6px_rgb(21_29_50/0.5)] transition-colors hover:bg-brand-secondary-hover"
+          disabled={status === "sending"}
+          className="h-12 w-full cursor-pointer rounded-md bg-brand-secondary text-xs font-medium text-white shadow-[0_8px_16px_-6px_rgb(21_29_50/0.5)] transition-colors hover:bg-brand-secondary-hover disabled:opacity-70"
         >
-          {sent ? "Thanks - we will be in touch" : submitLabel}
+          {status === "sending"
+            ? "Sending..."
+            : status === "sent"
+              ? "Thanks - we will be in touch"
+              : submitLabel}
         </button>
+
+        {error && (
+          <p role="alert" className="mt-3 text-xs text-brand-primary">
+            {error}
+          </p>
+        )}
+        {status === "sent" && (
+          <p role="status" className="mt-3 text-xs text-brand-secondary/80">
+            Your message has reached our support team. We will get back to you shortly.
+          </p>
+        )}
       </div>
     </form>
   );

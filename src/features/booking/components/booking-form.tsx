@@ -6,6 +6,7 @@ import { useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 
 import { bookingContent } from "../content/booking.content";
+import { submitBooking } from "../services/submit-booking";
 import type { BookingField, ServiceId } from "../types";
 
 const fieldBase =
@@ -77,7 +78,10 @@ function Field({
             required={field.required}
             className={cn(fieldBase, "appearance-none pr-10", value === "" && "text-brand-tertiary/80")}
           >
-            <option value="">{field.placeholder}</option>
+            {/* Prompt only - it must not read as a third service in the list */}
+            <option value="" disabled hidden>
+              {field.placeholder}
+            </option>
             {field.options?.map((option) => (
               <option key={option} value={option} className="text-brand-secondary">
                 {option}
@@ -126,16 +130,27 @@ export function BookingForm() {
   const { serviceField, fields, submitLabel } = bookingContent;
   const [service, setService] = useState<ServiceId | "">("");
   const [values, setValues] = useState<Record<string, string>>({});
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [error, setError] = useState("");
 
   // Nothing picked yet: show the ride fields, which is the state the design shows.
   const activeService: ServiceId = service === "" ? "medical-ride" : service;
   const visible = fields.filter((field) => !field.services || field.services.includes(activeService));
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // TODO: post to the booking endpoint through src/services once it exists.
-    setSent(true);
+    setStatus("sending");
+    setError("");
+
+    try {
+      await submitBooking({ [serviceField.name]: activeService, ...values });
+      setValues({});
+      setService("");
+      setStatus("sent");
+    } catch (cause) {
+      setStatus("idle");
+      setError(cause instanceof Error ? cause.message : "Something went wrong. Please try again.");
+    }
   }
 
   return (
@@ -170,10 +185,22 @@ export function BookingForm() {
       <div className="pt-2 sm:col-span-2">
         <button
           type="submit"
-          className="h-14 w-full rounded-md bg-brand-secondary text-sm font-medium text-white transition-colors hover:bg-brand-secondary-hover"
+          disabled={status === "sending"}
+          className="h-14 w-full rounded-md bg-brand-secondary text-sm font-medium text-white transition-colors hover:bg-brand-secondary-hover disabled:opacity-70"
         >
-          {sent ? "Thanks - we will be in touch" : submitLabel}
+          {status === "sending" ? "Sending..." : status === "sent" ? "Thanks - we will be in touch" : submitLabel}
         </button>
+
+        {error && (
+          <p role="alert" className="mt-3 text-[13px] text-brand-primary">
+            {error}
+          </p>
+        )}
+        {status === "sent" && (
+          <p role="status" className="mt-3 text-[13px] text-brand-secondary/80">
+            Your request has reached our team. We will call you to confirm the details.
+          </p>
+        )}
       </div>
     </form>
   );
