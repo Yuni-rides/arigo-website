@@ -7,9 +7,12 @@ export const siteConfig = {
   locale: "en_US",
   ogImage: "/opengraph-image",
   twitterHandle: "@arigo",
+  /** Official Arigo profiles - the single source for the footer icons and the JSON-LD sameAs list. */
   links: {
-    twitter: "https://twitter.com/arigo",
-    linkedin: "https://linkedin.com/company/arigo",
+    facebook: "https://www.facebook.com/people/Arigoo/61594506308474/",
+    instagram: "https://www.instagram.com/arigoofficial/",
+    linkedin: "https://www.linkedin.com/company/143926260/",
+    youtube: "https://www.youtube.com/@Arigo-Ride",
     email: "hello@arigo.com",
   },
 } as const;

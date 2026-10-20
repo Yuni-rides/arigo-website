@@ -14,19 +14,19 @@ export const storiesContent: StoriesContent = {
       id: "real-people",
       lines: ["Real People.", "Real Journeys.", "That\u2019s Arigo."],
       image,
-      videoUrl: "https://youtube.com/@arigo",
+      videoUrl: "https://www.youtube.com/@Arigo-Ride",
     },
     {
       id: "families",
       lines: ["Every Family.", "Every Morning.", "Cared For."],
       image,
-      videoUrl: "https://youtube.com/@arigo",
+      videoUrl: "https://www.youtube.com/@Arigo-Ride",
     },
     {
       id: "drivers",
       lines: ["Our Drivers.", "Our Heroes.", "Every Mile."],
       image,
-      videoUrl: "https://youtube.com/@arigo",
+      videoUrl: "https://www.youtube.com/@Arigo-Ride",
     },
   ],
 };

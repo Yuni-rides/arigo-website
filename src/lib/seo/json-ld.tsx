@@ -17,7 +17,12 @@ export const organizationSchema = {
   name: siteConfig.name,
   url: siteConfig.url,
   logo: `${siteConfig.url}/icon.png`,
-  sameAs: [siteConfig.links.twitter, siteConfig.links.linkedin],
+  sameAs: [
+    siteConfig.links.facebook,
+    siteConfig.links.instagram,
+    siteConfig.links.linkedin,
+    siteConfig.links.youtube,
+  ],
 };
 
 export const websiteSchema = {

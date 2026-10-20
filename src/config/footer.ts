@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import type { NavItem } from "@/types";
 
 export const footerDescription =
@@ -50,10 +51,10 @@ export const footerNewsletter = {
 };
 
 export const socialLinks = [
-  { id: "facebook", label: "Facebook", href: "https://facebook.com/arigo" },
-  { id: "instagram", label: "Instagram", href: "https://instagram.com/arigo" },
-  { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com/company/arigo" },
-  { id: "youtube", label: "YouTube", href: "https://youtube.com/@arigo" },
+  { id: "facebook", label: "Facebook", href: siteConfig.links.facebook },
+  { id: "instagram", label: "Instagram", href: siteConfig.links.instagram },
+  { id: "linkedin", label: "LinkedIn", href: siteConfig.links.linkedin },
+  { id: "youtube", label: "YouTube", href: siteConfig.links.youtube },
 ] as const;
 
 export const appLinks = {
