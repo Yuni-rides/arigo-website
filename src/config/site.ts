@@ -13,7 +13,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/arigoofficial/",
     linkedin: "https://www.linkedin.com/company/143926260/",
     youtube: "https://www.youtube.com/@Arigo-Ride",
-    email: "hello@arigo.com",
+    email: "admin@arigooo.com",
   },
 } as const;
 

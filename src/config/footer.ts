@@ -38,8 +38,8 @@ export const footerColumns: { heading: string; items: NavItem[] }[] = [
 ];
 
 export const footerContact = {
-  phone: { label: "415-535-2155", href: "tel:+14155352155" },
-  email: { label: "info@arigo.com", href: "mailto:info@arigo.com" },
+  phone: { label: "415-531-6769", href: "tel:+14155316769" },
+  email: { label: "admin@arigooo.com", href: "mailto:admin@arigooo.com" },
 };
 
 export const footerNewsletter = {

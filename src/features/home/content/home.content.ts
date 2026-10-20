@@ -3,7 +3,7 @@ import { Gauge, ShieldCheck, Sparkles, Workflow } from "lucide-react";
 import type { CtaContent, FeatureItem, HeroContent, StatItem } from "../types";
 
 const defaultCtas = {
-  primaryCta: { label: "Become A Driver", href: "/#drivers" },
+  primaryCta: { label: "Become A Driver", href: "/drivers" },
   secondaryCta: { label: "Request A Ride", href: "/#request" },
 };
 
@@ -88,5 +88,5 @@ export const statItems: StatItem[] = [
 export const ctaContent: CtaContent = {
   title: "Ready to build something great?",
   description: "Tell us about your project and we will get back to you within one business day.",
-  cta: { label: "Talk to us", href: "mailto:hello@arigo.com" },
+  cta: { label: "Talk to us", href: "mailto:admin@arigooo.com" },
 };
