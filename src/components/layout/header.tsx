@@ -3,18 +3,29 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 import { Logo } from "@/components/layout/logo";
 import { Button } from "@/components/ui";
 import { mainNav } from "@/config/navigation";
 import { useScrolled } from "@/hooks";
-import { transitions } from "@/lib/motion/variants";
 import { cn } from "@/lib/utils";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const scrolled = useScrolled(24);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-6">
@@ -50,32 +61,59 @@ export function Header() {
             </button>
           </div>
         </div>
-
-        <AnimatePresence>
-          {open && (
-            <motion.nav
-              id="site-menu"
-              aria-label="Primary"
-              initial={{ opacity: 0, y: -8, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -8, scale: 0.98 }}
-              transition={transitions.fast}
-              className="absolute inset-x-0 top-full mt-2 overflow-hidden rounded-2xl border border-white/10 bg-brand-secondary/95 p-2 shadow-xl backdrop-blur-xl"
-            >
-              {mainNav.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 text-sm font-medium text-white/85 transition-colors hover:bg-white/10 hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </motion.nav>
-          )}
-        </AnimatePresence>
       </div>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="menu-overlay"
+            aria-hidden
+            onClick={() => setOpen(false)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-brand-secondary/60"
+          />
+        )}
+        {open && (
+          <motion.nav
+            key="menu-panel"
+            id="site-menu"
+            aria-label="Primary"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-y-0 right-0 flex w-[85%] flex-col items-center border-l border-white/20 bg-white/20 pt-10 backdrop-blur-2xl sm:w-[26%] sm:min-w-[340px]"
+          >
+            <Logo />
+
+            <ul className="mt-12 flex flex-col items-center">
+              {mainNav.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="block px-6 py-3.5 text-[15px] font-medium tracking-[0.15em] text-white transition-colors hover:text-brand-primary"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="mt-14 grid size-12 cursor-pointer place-items-center text-white transition-opacity hover:opacity-80"
+            >
+              <X className="size-7" />
+            </button>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

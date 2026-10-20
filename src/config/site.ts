@@ -1,7 +1,3 @@
-/**
- * Site-wide constants. Anything that appears in metadata, the footer,
- * structured data, or the sitemap should be sourced from here.
- */
 export const siteConfig = {
   name: "Arigo",
   title: "Arigo - Care in Every Mile",

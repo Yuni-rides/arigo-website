@@ -63,5 +63,5 @@ export const appLinks = {
 
 export const footerBottom = {
   copyright: (year: number) => `${year} Arigo. All rights reserved.`,
-  tagline: "Proudly serving students and communities across California and Illinois.",
+  tagline: "Proudly providing NEMT and delivery services across California and Washington.",
 };

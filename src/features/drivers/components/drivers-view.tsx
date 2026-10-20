@@ -1,3 +1,4 @@
+import { DriverApplicationSection } from "./driver-application-section";
 import { DriverToolsSection } from "./driver-tools-section";
 import { DriversCareCta } from "./drivers-care-cta";
 import { DriversExperienceSection } from "./drivers-experience-section";
@@ -12,6 +13,7 @@ export function DriversView() {
       <DriversExperienceSection />
       <DriversTestimonials />
       <DriversCareCta />
+      <DriverApplicationSection />
     </>
   );
 }
