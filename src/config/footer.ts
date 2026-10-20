@@ -18,23 +18,21 @@ export const footerColumns: { heading: string; items: NavItem[] }[] = [
   },
   {
     heading: "Our Services",
+    // The trips we cover - every one of them opens the services page.
     items: [
-      { label: "General Education Transportation", href: "/services/general-education" },
-      { label: "IEP Transportation", href: "/services/iep" },
-      { label: "Specialised Support", href: "/services/specialised-support" },
-      { label: "Safety & Training", href: "/services/safety-training" },
-      { label: "Areas We Serve", href: "/areas" },
+      { label: "Dialysis", href: "/services" },
+      { label: "Radiation & chemotherapy", href: "/services" },
+      { label: "Physical therapy", href: "/services" },
+      { label: "Doctor and dental visits", href: "/services" },
+      { label: "Hospital discharge", href: "/services" },
+      { label: "Longer trips for care", href: "/services" },
     ],
   },
   {
     heading: "Resources",
     items: [
-      { label: "Driver Requirements", href: "/drivers/requirements" },
-      { label: "Onboarding Process", href: "/drivers/onboarding" },
-      { label: "Safety Guidelines", href: "/safety" },
-      { label: "FAQs", href: "/faqs" },
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms of Service", href: "/terms" },
+      { label: "Privacy Policy", href: "/#" },
+      { label: "Terms of Service", href: "/#" },
     ],
   },
 ];
