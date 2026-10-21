@@ -19,8 +19,7 @@ export function BookingSection() {
             </div>
             <Image
               src={headerArt.src}
-              alt=""
-              aria-hidden
+              alt={headerArt.alt}
               width={headerArt.width}
               height={headerArt.height}
               className="pointer-events-none absolute right-0 bottom-0 hidden h-full w-auto select-none sm:block"

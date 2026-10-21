@@ -137,7 +137,7 @@ export function Footer() {
         <div className="pointer-events-none relative ml-auto hidden aspect-[1086/240] w-[75%] max-w-[1086px] select-none lg:-mt-9 lg:block">
           <Image
             src="/images/footerAvatar.png"
-            alt=""
+            alt="Illustration of an Arigo bus driving toward a city skyline at sunset"
             fill
             sizes="75vw"
             className="object-cover object-center"

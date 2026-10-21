@@ -4,7 +4,12 @@ export const contactSupportContent: ContactSupportContent = {
   title: "Contact Support",
   description:
     "Tell us about the ride or delivery you need. Our team will contact you to confirm the details.",
-  headerArt: { src: "/images/arigo-book-ride-header.png", width: 520, height: 140 },
+  headerArt: {
+    src: "/images/arigo-book-ride-header.png",
+    alt: "Illustration of an Arigo wheelchair-accessible van parked outside a hospital",
+    width: 520,
+    height: 140,
+  },
   office: {
     city: "San Francisco",
     suffix: "office contact details",

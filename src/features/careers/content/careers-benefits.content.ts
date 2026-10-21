@@ -26,7 +26,7 @@ export const careersBenefitsContent = {
         "Explore driving opportunities and discuss the availability that works for you.",
       icon: {
         src: "/images/schedule-calendar-icon.png",
-        alt: "",
+        alt: "Calendar and clock icon",
       },
       featured: true,
     },
@@ -37,7 +37,7 @@ export const careersBenefitsContent = {
         "Learn about ride opportunities, compensation and the payment schedule before getting started.",
       icon: {
         src: "/images/earnings-money-icon.png",
-        alt: "",
+        alt: "Dollar coin and clock icon",
       },
     },
     {
@@ -47,7 +47,7 @@ export const careersBenefitsContent = {
         "Help patients reach their appointments and give families one less thing to worry about.",
       icon: {
         src: "/images/make-difference-heart-icon.png",
-        alt: "",
+        alt: "Heart with a road running through it",
       },
     },
     {
@@ -57,7 +57,7 @@ export const careersBenefitsContent = {
         "Connect with our team for guidance on onboarding, trip questions and support arrangements.",
       icon: {
         src: "/images/driver-support-247-icon.png",
-        alt: "",
+        alt: "Support agent wearing a headset beside a 24-hour clock",
       },
     },
   ] satisfies CareerBenefit[],

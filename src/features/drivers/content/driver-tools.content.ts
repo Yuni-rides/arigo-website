@@ -2,7 +2,7 @@ export interface DriverTool {
   id: string;
   title: string;
   description: string;
-  icon: { src: string; width: number; height: number };
+  icon: { src: string; alt: string; width: number; height: number };
 }
 
 export interface DriverToolsContent {
@@ -23,21 +23,21 @@ export const driverToolsContent: DriverToolsContent = {
       title: "Optimize Workflows",
       description:
         "Guided, step-by-step task flows walk drivers through each part of their shift from clock-in through pre-ride safety checks.",
-      icon: { src: "/images/workflows.png", width: 132, height: 132 },
+      icon: { src: "/images/workflows.png", alt: "Clipboard with a checklist", width: 132, height: 132 },
     },
     {
       id: "stay-connected",
       title: "Stay Connected",
       description:
         "Real-time route updates, in-app dispatch messaging, and live ride notifications, straight from your driver device.",
-      icon: { src: "/images/stay-connected.png", width: 220, height: 145 },
+      icon: { src: "/images/stay-connected.png", alt: "Two map pins joined by a route", width: 220, height: 145 },
     },
     {
       id: "performance-feedback",
       title: "Get Performance Feedback",
       description:
         "Get paid for every completed ride, on a schedule that works around you not the other way around.",
-      icon: { src: "/images/performance-feedback.png", width: 292, height: 194 },
+      icon: { src: "/images/performance-feedback.png", alt: "Shield with a check mark", width: 292, height: 194 },
     },
   ],
 };

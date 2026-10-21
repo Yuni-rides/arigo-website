@@ -31,8 +31,7 @@ export function DriverApplicationSection() {
 
             <Image
               src={headerArt.src}
-              alt=""
-              aria-hidden="true"
+              alt={headerArt.alt}
               width={headerArt.width}
               height={headerArt.height}
               className="pointer-events-none absolute right-4 bottom-3 hidden h-[115px] w-auto max-w-[35%] object-contain select-none sm:block"

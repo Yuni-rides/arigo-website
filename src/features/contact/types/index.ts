@@ -12,7 +12,7 @@ export type ContactField = {
 export type ContactSupportContent = {
   title: string;
   description: string;
-  headerArt: { src: string; width: number; height: number };
+  headerArt: { src: string; alt: string; width: number; height: number };
   office: {
     city: string;
     suffix: string;

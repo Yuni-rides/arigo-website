@@ -27,5 +27,5 @@ export interface BookingContent {
   };
   fields: BookingField[];
   photo: { src: string; alt: string; width: number; height: number };
-  headerArt: { src: string; width: number; height: number };
+  headerArt: { src: string; alt: string; width: number; height: number };
 }

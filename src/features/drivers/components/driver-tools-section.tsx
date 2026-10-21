@@ -79,8 +79,7 @@ export function DriverToolsSection() {
                 <div className="flex h-[160px] w-full shrink-0 items-center justify-center">
                   <Image
                     src={tool.icon.src}
-                    alt=""
-                    aria-hidden="true"
+                    alt={tool.icon.alt}
                     width={tool.icon.width}
                     height={tool.icon.height}
                     className={
