@@ -47,10 +47,10 @@ export function AreaCard({ state, cities, href, photo, ctaLabel }: ServiceArea &
         </ul>
 
         <div className="mt-auto pt-8">
-          <Button href={href} variant="secondary" className="h-[68px] rounded-[16px] px-12 text-[18px]">
+          {/* <Button href={href} variant="secondary" className="h-[68px] rounded-[16px] px-12 text-[18px]">
             {ctaLabel}
             <ArrowUpRight className="size-5" />
-          </Button>
+          </Button> */}
         </div>
       </div>
     </article>
