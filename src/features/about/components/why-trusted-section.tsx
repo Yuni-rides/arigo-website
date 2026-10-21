@@ -58,7 +58,7 @@ export function WhyTrustedSection() {
           <Stagger stagger={0.1}>
             <RevealItem>
               <h2 className="text-3xl leading-tight font-semibold text-brand-secondary sm:text-4xl lg:text-[48px]">
-                {title} <span className="text-brand-primary">{highlight}</span> {titleEnd}
+                {title} <span className="text-brand-primary"></span> {titleEnd}
               </h2>
             </RevealItem>
 

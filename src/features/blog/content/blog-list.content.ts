@@ -6,7 +6,6 @@ const categories: BlogCategory[] = [
   "Drivers",
   "Healthcare Partners",
   "Medication Delivery",
-  "Company News",
 ];
 
 const excerpt =

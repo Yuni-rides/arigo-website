@@ -3,8 +3,7 @@ export type BlogCategory =
   | "Patients & Families"
   | "Drivers"
   | "Healthcare Partners"
-  | "Medication Delivery"
-  | "Company News";
+  | "Medication Delivery";
 
 export interface BlogPost {
   id: string;

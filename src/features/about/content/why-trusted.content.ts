@@ -1,11 +1,11 @@
 import { footerContact } from "@/config/footer";
 
 export const whyTrustedContent = {
-  title: "Why",
+  title: "",
   highlight: "Arigo",
-  titleEnd: "is the Trusted Choice",
+  titleEnd: "Why We’re Here ",
   description:
-    "Choosing Arigo means partnering with a medical transportation service built on safety, trust and genuine care. We understand how important it is to reach an appointment on time and with dignity. Every driver is carefully vetted, professionally trained, and dedicated to the highest standard of service, so patients and families can have complete peace of mind knowing their loved one is in safe, capable hands.",
+    "Getting to a medical appointment should be part of the plan, but transportation can easily become the part that gets overlooked. The appointment is scheduled. The doctor is booked. The treatment is arranged. Then the person who was supposed to drive can’t make it, public transportation doesn’t work for the trip, or there simply isn’t enough room for a wheelchair. That’s where Arigo comes in. We provide scheduled transportation for dialysis, therapy, doctor visits, and other medical appointments, as well as rides home from the hospital. Our goal is simple: make the journey to and from care easier, more comfortable, and less stressful.",
   cta: { label: "Contact us", href: "/contact-us" },
   phone: footerContact.phone,
   photos: {

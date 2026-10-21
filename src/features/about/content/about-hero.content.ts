@@ -5,7 +5,7 @@ export const aboutHeroContent: PageHeroProps = {
     { text: "Driven by ", highlight: "Care." },
     { text: "Growing with ", highlight: "Purpose." },
   ],
-  description: "Technology driven, caring transportation service trusted by families across the U.S.",
+  description: "Arigo helps people get to their medical appointments when getting there isn’t always easy—and get home with the same care and attention.",
   image: {
     src: "/images/aboutBanner.png",
     alt: "An Arigo driver helping a child into a van while a mother and daughter look on",
