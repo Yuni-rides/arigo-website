@@ -5,6 +5,8 @@ import { asLine, asText, EMAIL_RE, rowsToHtml, rowsToText, sendMail, type EmailR
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
+// SMTP handshakes can be slow on a cold start; the Hobby default of 10s is not always enough.
+export const maxDuration = 30;
 
 export async function POST(request: Request) {
   let payload: Record<string, unknown>;

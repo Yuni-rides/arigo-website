@@ -10,5 +10,4 @@ export const careersHeroContent: PageHeroProps = {
     src: "/images/careerBanner.png",
     alt: "Arigo drivers in orange uniforms talking and laughing together",
   },
-  primaryCta: { label: "Learn more", href: "/careers#positions" },
 };

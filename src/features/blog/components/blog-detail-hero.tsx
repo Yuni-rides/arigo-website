@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { RevealItem, Stagger } from "@/components/motion";
 import { Container } from "@/components/ui";
@@ -23,16 +24,21 @@ export function BlogDetailHero({ slug, title, author, date, banner }: BlogArticl
           <Image src={banner.src} alt={banner.alt} fill priority sizes="100vw" className="object-cover" />
           <span aria-hidden className="absolute inset-0" style={BANNER_WASH} />
 
-          {/* Logo, top-left */}
-          <div className="absolute top-[10%] left-[7%]">
+          {/* Logo, top-left - back to the home page */}
+          {/* z-20: the title block below is full-height and would otherwise swallow the click. */}
+          <Link href="/" aria-label={`${siteConfig.name} home`} className="absolute top-[10%] left-[7%] z-20">
+            {/*
+              max-w-none: inside an absolutely positioned link, `max-width: 100%` resolves against
+              a width that is itself derived from this image, which collapses the clickable area.
+            */}
             <Image
               src="/images/logo.png"
               alt={siteConfig.name}
               width={175}
               height={94}
-              className="h-12 w-auto sm:h-16 lg:h-[88px]"
+              className="h-12 w-auto max-w-none transition-opacity hover:opacity-85 sm:h-16 lg:h-[88px]"
             />
-          </div>
+          </Link>
 
           {/* Byline + share, top-right */}
           <div className="absolute top-[8%] right-[2%] rounded-2xl border border-white/20 bg-white/10 px-6 py-4 backdrop-blur-md">

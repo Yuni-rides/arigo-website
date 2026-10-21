@@ -8,3 +8,5 @@ export { BlogView } from "./components/blog-view";
 export { blogMetadata } from "./blog.metadata";
 export { buildBlogDetailMetadata } from "./blog-detail.metadata";
 export { getArticleBySlug, getArticleSlugs } from "./get-article";
+export { driverSpotlightPosts } from "./content/blog-list.content";
+export type { BlogPost } from "./types";
