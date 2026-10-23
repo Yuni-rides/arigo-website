@@ -1,5 +1,7 @@
 import type { BlogCategory, BlogListContent, BlogPost } from "../types";
 
+import { articles } from "./articles";
+
 const categories: BlogCategory[] = [
   "Safety & Trust",
   "Patients & Families",
@@ -72,6 +74,17 @@ const driverSpotlights: BlogPost[] = [
   image: { src: spotlight.image, width: 293, height: 187 },
 }));
 
+/** Listing cards for the posts that have real copy; the article file is the only source. */
+const writtenPosts: BlogPost[] = articles.map((article, index) => ({
+  id: `article-${index + 1}`,
+  title: article.title,
+  category: article.category,
+  date: article.date,
+  href: `/blog/${article.slug}`,
+  excerpt: article.metaDescription ?? article.intro,
+  image: { src: article.banner.src, width: 293, height: 187 },
+}));
+
 const seeds: { title: string; category: BlogCategory; image: number }[] = [
   { title: "Inside Arigo's Driver Vetting Process", category: "Safety & Trust", image: 1 },
   { title: "How We Keep Every Ride Safe and Comfortable", category: "Safety & Trust", image: 2 },
@@ -104,7 +117,7 @@ export const blogListContent: BlogListContent = {
   allLabel: "All",
   categories,
   pageSize: 16,
-  posts: [...driverSpotlights, ...placeholders],
+  posts: [...writtenPosts, ...driverSpotlights, ...placeholders],
 };
 
 /** The spotlights the drivers page slides through, newest first. */

@@ -39,7 +39,14 @@ export interface BlogSection {
   heading: string;
   lead?: string;
   paragraphs?: string[];
-  bullets?: { label: string; text: string }[];
+  /** `label` is a bold lead-in; leave it out for a plain bullet. */
+  bullets?: { label?: string; text: string }[];
+  /** Numbered list instead of dots, for steps that happen in order. */
+  ordered?: boolean;
+  /** Paragraphs that come after the bullets. */
+  outro?: string[];
+  faqs?: { question: string; answer: string }[];
+  cta?: { label: string; href: string };
 }
 
 export interface BlogArticle {
@@ -49,6 +56,13 @@ export interface BlogArticle {
   date: string;
   author: string;
   banner: { src: string; alt: string };
+  /** Opening paragraph, and the fallback meta description. */
   intro: string;
+  /** Further opening paragraphs, before the first heading. */
+  introParagraphs?: string[];
   sections: BlogSection[];
+  /** SEO overrides for posts that ship with their own copy. */
+  metaTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
 }

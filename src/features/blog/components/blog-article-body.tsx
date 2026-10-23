@@ -1,13 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Container } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 import type { BlogArticle } from "../types";
+import { RichText } from "./rich-text";
 
-export function BlogArticleBody({ intro, sections }: BlogArticle) {
+export function BlogArticleBody({ intro, introParagraphs, sections }: BlogArticle) {
   const [activeId, setActiveId] = useState(sections[0]?.id);
 
   useEffect(() => {
@@ -64,7 +66,13 @@ export function BlogArticleBody({ intro, sections }: BlogArticle) {
           </nav>
 
           <article className="max-w-5xl">
-            <p className="text-[15px] leading-relaxed text-brand-secondary/85">{intro}</p>
+            <p className="text-[15px] leading-relaxed text-brand-secondary/85"><RichText text={intro} /></p>
+
+            {introParagraphs?.map((paragraph) => (
+              <p key={paragraph} className="mt-4 text-[15px] leading-relaxed text-brand-secondary/85">
+                <RichText text={paragraph} />
+              </p>
+            ))}
 
             {sections.map((section) => (
               <div key={section.id} className="mt-12 scroll-mt-28" id={section.id}>
@@ -73,33 +81,71 @@ export function BlogArticleBody({ intro, sections }: BlogArticle) {
                 </h2>
 
                 {section.lead && (
-                  <p className="mt-4 text-[15px] leading-relaxed text-brand-secondary/85">{section.lead}</p>
+                  <p className="mt-4 text-[15px] leading-relaxed text-brand-secondary/85"><RichText text={section.lead} /></p>
                 )}
 
                 {section.paragraphs?.map((paragraph) => (
                   <p key={paragraph} className="mt-4 text-[15px] leading-relaxed text-brand-secondary/85">
-                    {paragraph}
+                    <RichText text={paragraph} />
                   </p>
                 ))}
 
                 {section.bullets && (
-                  <ul className="mt-4 space-y-3">
-                    {section.bullets.map((bullet) => (
+                  <ol className="mt-4 space-y-3">
+                    {section.bullets.map((bullet, bulletIndex) => (
                       <li
-                        key={bullet.label}
+                        key={bullet.text}
                         className="flex gap-2.5 text-[15px] leading-relaxed text-brand-secondary/85"
                       >
-                        <span
-                          aria-hidden
-                          className="mt-2 size-1.5 shrink-0 rounded-full bg-brand-secondary/60"
-                        />
+                        {section.ordered ? (
+                          <span className="mt-px shrink-0 font-semibold text-brand-primary">
+                            {bulletIndex + 1}.
+                          </span>
+                        ) : (
+                          <span
+                            aria-hidden
+                            className="mt-2 size-1.5 shrink-0 rounded-full bg-brand-secondary/60"
+                          />
+                        )}
                         <span>
-                          <strong className="font-semibold text-brand-secondary">{bullet.label}</strong>{" "}
-                          {bullet.text}
+                          {bullet.label && (
+                            <strong className="font-semibold text-brand-secondary">
+                              {bullet.label}{" "}
+                            </strong>
+                          )}
+                          <RichText text={bullet.text} />
                         </span>
                       </li>
                     ))}
-                  </ul>
+                  </ol>
+                )}
+
+                {section.outro?.map((paragraph) => (
+                  <p key={paragraph} className="mt-4 text-[15px] leading-relaxed text-brand-secondary/85">
+                    <RichText text={paragraph} />
+                  </p>
+                ))}
+
+                {section.faqs && (
+                  <dl className="mt-6 space-y-5">
+                    {section.faqs.map((faq) => (
+                      <div key={faq.question}>
+                        <dt className="text-[17px] font-semibold text-brand-secondary">{faq.question}</dt>
+                        <dd className="mt-2 text-[15px] leading-relaxed text-brand-secondary/85">
+                          <RichText text={faq.answer} />
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+
+                {section.cta && (
+                  <Link
+                    href={section.cta.href}
+                    className="mt-6 inline-flex h-12 items-center rounded-md bg-brand-primary px-8 text-sm font-medium text-white transition-colors hover:bg-brand-primary-hover"
+                  >
+                    {section.cta.label}
+                  </Link>
                 )}
               </div>
             ))}

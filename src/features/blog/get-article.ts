@@ -1,27 +1,27 @@
+import { articles } from "./content/articles";
 import { blogArticle } from "./content/blog-article.content";
 import { blogListContent } from "./content/blog-list.content";
-import type { BlogArticle } from "./types";
+import type { BlogArticle, BlogPost } from "./types";
 
-/** Slug is derived from the title the same way the list builds its hrefs. */
-function slugify(title: string) {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
+/** The slug a listing card links to. Written posts carry their own; placeholders use the title. */
+function slugOf(post: BlogPost) {
+  return post.href.replace(/^\/blog\//, "");
 }
 
 /** Every slug the blog can serve, de-duplicated. */
 export function getArticleSlugs() {
-  return [...new Set(blogListContent.posts.map((post) => slugify(post.title)))];
+  return [...new Set(blogListContent.posts.map(slugOf))];
 }
 
 /**
- * Builds the article for a slug: the title, date, category and banner come from
- * the matching post, while the body is the shared placeholder until each post
- * has real copy of its own.
+ * Real posts are served as written. Everything else still falls back to the shared
+ * placeholder body, with the list supplying the title, date, category and banner.
  */
 export function getArticleBySlug(slug: string): BlogArticle | null {
-  const post = blogListContent.posts.find((item) => slugify(item.title) === slug);
+  const written = articles.find((article) => article.slug === slug);
+  if (written) return written;
+
+  const post = blogListContent.posts.find((item) => slugOf(item) === slug);
   if (!post) return null;
 
   return {

@@ -4,9 +4,11 @@ import type { BlogArticle } from "./types";
 
 export function buildBlogDetailMetadata(article: BlogArticle) {
   return createMetadata({
-    title: article.title,
-    description: article.intro.slice(0, 155),
+    // A written post brings its own SEO copy; placeholders fall back to the body.
+    title: article.metaTitle ?? article.title,
+    description: article.metaDescription ?? article.intro.slice(0, 155),
     path: `/blog/${article.slug}`,
-    keywords: ["Arigo blog", article.category],
+    image: article.banner.src,
+    keywords: article.keywords ?? ["Arigo blog", article.category],
   });
 }
