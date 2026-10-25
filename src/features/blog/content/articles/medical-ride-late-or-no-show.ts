@@ -4,7 +4,7 @@ export const medicalRideLateOrNoShow: BlogArticle = {
   slug: "medical-ride-late-or-no-show",
   title: "What to do if your medical ride is late or never shows up",
   category: "Safety & Trust",
-  date: "Oct 23, 2026",
+  date: "Oct 19, 2026",
   author: "Arigo",
   metaTitle: "What to Do If Your Medical Ride Is Late or Never Shows",
   metaDescription:

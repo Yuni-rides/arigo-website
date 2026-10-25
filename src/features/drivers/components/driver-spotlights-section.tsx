@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 
 import { Reveal } from "@/components/motion";
 import { Container } from "@/components/ui";
-import { driverSpotlightPosts } from "@/features/blog";
 
 import { driverSpotlightsContent } from "../content/driver-spotlights.content";
 
@@ -71,8 +69,7 @@ function slideTo(track: HTMLUListElement, left: number, instant: boolean) {
 }
 
 export function DriverSpotlightsSection() {
-  const { title, label, slideDuration } = driverSpotlightsContent;
-  const posts = driverSpotlightPosts;
+  const { title, label, slideDuration, spotlights: posts } = driverSpotlightsContent;
 
   const trackRef = useRef<HTMLUListElement>(null);
   const [index, setIndex] = useState(0);
@@ -133,17 +130,14 @@ export function DriverSpotlightsSection() {
                 key={post.id}
                 className="w-[78%] shrink-0 sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-13.34px)]"
               >
-                <Link
-                  href={post.href}
-                  className="group block h-full rounded-[18px] bg-white p-2 shadow-[0_10px_25px_-5px_rgba(21,29,50,0.08)] transition-shadow duration-300 hover:shadow-[0_16px_32px_-8px_rgba(21,29,50,0.18)]"
-                >
+                <figure className="group h-full rounded-[18px] bg-white p-2 shadow-[0_10px_25px_-5px_rgba(21,29,50,0.08)]">
                   <div className="relative w-full overflow-hidden rounded-[13px]" style={IMAGE_CROP}>
                     <Image
                       src={post.image.src}
-                      alt={post.author ?? post.title}
+                      alt={post.image.alt}
                       fill
                       sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 78vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      className="object-cover"
                     />
                     <span aria-hidden className="absolute inset-0" style={IMAGE_WASH} />
                   </div>
@@ -154,12 +148,14 @@ export function DriverSpotlightsSection() {
                     </p>
 
                     <blockquote className="mt-2.5 text-[14px] leading-[1.45] text-brand-secondary">
-                      &ldquo;{post.title}&rdquo;
+                      &ldquo;{post.quote}&rdquo;
                     </blockquote>
 
-                    <p className="mt-4 text-[13px] font-semibold text-brand-secondary">{post.author}</p>
+                    <figcaption className="mt-4 text-[13px] font-semibold text-brand-secondary">
+                      {post.author}
+                    </figcaption>
                   </div>
-                </Link>
+                </figure>
               </li>
             ))}
           </ul>

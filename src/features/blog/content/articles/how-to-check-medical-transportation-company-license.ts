@@ -4,7 +4,7 @@ export const howToCheckMedicalTransportationCompanyLicense: BlogArticle = {
   slug: "how-to-check-medical-transportation-company-license",
   title: "How to check that a medical transportation company is licensed",
   category: "Safety & Trust",
-  date: "Oct 23, 2026",
+  date: "Oct 20, 2026",
   author: "Arigo",
   metaTitle: "How to Check a Medical Transportation Company's License",
   metaDescription:

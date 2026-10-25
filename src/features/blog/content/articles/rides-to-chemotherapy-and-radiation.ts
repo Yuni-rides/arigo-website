@@ -4,7 +4,7 @@ export const ridesToChemotherapyAndRadiation: BlogArticle = {
   slug: "rides-to-chemotherapy-and-radiation",
   title: "Rides to chemotherapy and radiation",
   category: "Patients & Families",
-  date: "Oct 23, 2026",
+  date: "Oct 16, 2026",
   author: "Arigo",
   metaTitle: "Rides to Chemotherapy and Radiation: Options That Work",
   metaDescription:

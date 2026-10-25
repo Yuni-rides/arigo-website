@@ -12,8 +12,6 @@ export interface BlogPost {
   date: string;
   href: string;
   excerpt: string;
-  /** Set on driver spotlight posts - the person being quoted. */
-  author?: string;
   image: { src: string; width: number; height: number };
 }
 

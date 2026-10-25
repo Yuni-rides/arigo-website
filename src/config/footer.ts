@@ -11,7 +11,7 @@ export const footerColumns: { heading: string; items: NavItem[] }[] = [
       { label: "Home", href: "/" },
       { label: "Services", href: "/services" },
       { label: "About", href: "/about-us" },
-      { label: "Become a Driver", href: "/#drivers" },
+      { label: "Become a Driver", href: "/drivers" },
       { label: "Blogs", href: "/blog" },
       { label: "Contact us", href: "/contact-us" },
     ],

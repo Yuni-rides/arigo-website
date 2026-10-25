@@ -1,8 +1,5 @@
 import type { AreasContent } from "../types";
 
-/** Same list on both cards in the design. */
-const cities = ["Everett", "Edmonds", "Edmonds", "Lynwood", "Shoreline", "Shoreline", "Everett"];
-
 export const areasContent: AreasContent = {
   title: "Areas we",
   titleUnderlined: "Serve in",
@@ -13,16 +10,30 @@ export const areasContent: AreasContent = {
     {
       id: "washington",
       state: "Washington",
-      cities,
+      cities: [
+        "Seattle",
+        "Everett",
+        "Lynnwood",
+        "Renton",
+        "Edmonds",
+        "Tukwila",
+        "Shoreline",
+        "Kent",
+        "Redmond",
+        "Federal Way",
+        "Bellevue",
+        "Tacoma",
+      ],
       href: "/areas/washington",
-      photo: { src: "/images/washington.png", width: 563, height: 352 },
+      // The two files are named the wrong way round: california.png is the Seattle skyline.
+      photo: { src: "/images/california.png", width: 563, height: 352 },
     },
     {
       id: "california",
       state: "California",
-      cities,
+      cities: ["Los Angeles", "San Diego", "San Jose", "Sacramento", "Fresno", "Oakland"],
       href: "/areas/california",
-      photo: { src: "/images/california.png", width: 563, height: 352 },
+      photo: { src: "/images/washington.png", width: 563, height: 352 },
     },
   ],
 };
