@@ -1,17 +1,23 @@
 import type { BlogArticle } from "../../types";
 
+import { becomeAMedicalTransportationDriver } from "./become-a-medical-transportation-driver";
+import { bookMedicalTransportationElderlyParent } from "./book-medical-transportation-elderly-parent";
+import { dayInTheLifeMedicalTransportationDriver } from "./day-in-the-life-medical-transportation-driver";
 import { gettingToDialysisWithoutACar } from "./getting-to-dialysis-without-a-car";
-import { howToBecomeAMedicalTransportationDriver } from "./how-to-become-a-medical-transportation-driver";
 import { howToCheckMedicalTransportationCompanyLicense } from "./how-to-check-medical-transportation-company-license";
 import { medicalRideLateOrNoShow } from "./medical-ride-late-or-no-show";
+import { questionsDialysisCentersAskTransportationPartner } from "./questions-dialysis-centers-ask-transportation-partner";
 import { ridesToChemotherapyAndRadiation } from "./rides-to-chemotherapy-and-radiation";
 
 /**
- * Posts that ship with their own copy, newest first. They appear in the listing ahead
- * of the placeholders, and the detail route serves these bodies instead of the shared one.
+ * Posts that ship with their own copy, newest first. The detail route serves these
+ * bodies, and the listing builds one card per article.
  */
 export const articles: BlogArticle[] = [
-  howToBecomeAMedicalTransportationDriver,
+  questionsDialysisCentersAskTransportationPartner,
+  bookMedicalTransportationElderlyParent,
+  dayInTheLifeMedicalTransportationDriver,
+  becomeAMedicalTransportationDriver,
   gettingToDialysisWithoutACar,
   howToCheckMedicalTransportationCompanyLicense,
   medicalRideLateOrNoShow,

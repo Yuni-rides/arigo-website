@@ -27,6 +27,6 @@ export const audiences: AudienceItem[] = [
     description:
       "{brand} gives parents and guardians confidence through safe, transparent, and child-focused transportation every ride, every day.",
     image: { src: "/images/guardians_care.png", alt: "A mother and daughter greeting an Arigo driver" },
-    cta: { prompt: "What are you thinking of?", label: "Become a Driver", href: "/#drivers" },
+    cta: { prompt: "What are you thinking of?", label: "Drive with Purpose", href: "/#drivers" },
   },
 ];

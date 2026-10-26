@@ -3,7 +3,7 @@ import { Gauge, ShieldCheck, Sparkles, Workflow } from "lucide-react";
 import type { CtaContent, FeatureItem, HeroContent, StatItem } from "../types";
 
 const defaultCtas = {
-  primaryCta: { label: "Become A Driver", href: "/drivers" },
+  primaryCta: { label: "Drive with Purpose", href: "/drivers" },
   secondaryCta: { label: "Request A Ride", href: "/#request" },
 };
 

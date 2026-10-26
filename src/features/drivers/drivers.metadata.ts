@@ -1,7 +1,7 @@
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const driversMetadata = createMetadata({
-  title: "Become a Driver",
+  title: "Drive with Purpose",
   description:
     "Drive with Arigo. Confident drivers, backed by tools that give them full transparency and support.",
   path: "/drivers",

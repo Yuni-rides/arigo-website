@@ -10,7 +10,7 @@ export interface DriverApplicationField {
 }
 
 export const driverApplicationContent = {
-  title: "Become a Driver",
+  title: "Drive with Purpose",
   description:
     "Join Arigo and drive change with us! Earn great pay while making a meaningful impact in the lives of patients and families.",
   photo: bookingContent.photo,

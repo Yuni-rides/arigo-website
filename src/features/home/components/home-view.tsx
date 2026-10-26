@@ -24,8 +24,8 @@ export function HomeView() {
       <WhyChoosingSection />
       <CareSolutionsSection />
       <PatientPromiseSection />
-      <StoriesSection />
-      <TestimonialsSection />
+      {/* <StoriesSection /> */}
+      {/* <TestimonialsSection /> */}
       <DownloadAppSection />
     </>
   );

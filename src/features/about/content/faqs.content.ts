@@ -39,7 +39,7 @@ export const faqsContent = {
       id: "become-driver",
       question: "Who can become an Arigo driver?",
       answer:
-        "If you're interested in driving with Arigo, visit our Become a Driver page to learn more about the opportunity and application process.",
+        "If you're interested in driving with Arigo, visit our Drive with Purpose page to learn more about the opportunity and application process.",
     },
     {
       id: "request-ride",

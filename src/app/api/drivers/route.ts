@@ -73,7 +73,7 @@ export async function POST(request: Request) {
       text: rowsToText("New driver application from the Arigo website", rows),
       html: rowsToHtml(
         "New driver application",
-        "Submitted through the Become a Driver form on the Arigo website.",
+        "Submitted through the Drive with Purpose form on the Arigo website.",
         rows,
       ),
     });
