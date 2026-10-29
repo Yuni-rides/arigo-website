@@ -41,7 +41,8 @@ export interface BlogSection {
   bullets?: { label?: string; text: string }[];
   /** Numbered list instead of dots, for steps that happen in order. */
   ordered?: boolean;
-  /** Paragraphs that come after the bullets. */
+  table?: { headers: string[]; rows: string[][] };
+  /** Paragraphs that come after the bullets and the table. */
   outro?: string[];
   faqs?: { question: string; answer: string }[];
   cta?: { label: string; href: string };

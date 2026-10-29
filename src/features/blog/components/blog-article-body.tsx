@@ -65,7 +65,7 @@ export function BlogArticleBody({ intro, introParagraphs, sections }: BlogArticl
             </ul>
           </nav>
 
-          <article className="max-w-5xl">
+          <article className="min-w-0 max-w-5xl">
             <p className="text-[15px] leading-relaxed text-brand-secondary/85"><RichText text={intro} /></p>
 
             {introParagraphs?.map((paragraph) => (
@@ -118,6 +118,46 @@ export function BlogArticleBody({ intro, introParagraphs, sections }: BlogArticl
                       </li>
                     ))}
                   </ol>
+                )}
+
+                {section.table && (
+                  // The wrapper scrolls instead of the page, so a wide table stays usable on a phone.
+                  <div className="mt-5 overflow-x-auto rounded-[12px] border border-border">
+                    <table className="w-full min-w-[460px] border-collapse text-left text-[14px]">
+                      <thead>
+                        <tr className="bg-brand-secondary/5">
+                          {section.table.headers.map((header) => (
+                            <th
+                              key={header}
+                              scope="col"
+                              className="border-b border-border px-4 py-3 font-semibold text-brand-secondary"
+                            >
+                              {header}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row) => (
+                          <tr key={row[0]} className="border-b border-border last:border-b-0">
+                            {row.map((cell, cellIndex) => (
+                              <td
+                                key={cell}
+                                className={cn(
+                                  "px-4 py-3 align-top leading-relaxed",
+                                  cellIndex === 0
+                                    ? "font-medium text-brand-secondary"
+                                    : "text-brand-secondary/85",
+                                )}
+                              >
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 )}
 
                 {section.outro?.map((paragraph) => (
