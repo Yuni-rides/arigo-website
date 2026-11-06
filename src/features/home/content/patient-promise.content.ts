@@ -1,9 +1,5 @@
 import type { PatientPromiseContent } from "../types";
 
-/**
- * Each asset ships with a white frame baked in; `content` is the measured box of
- * the real photograph inside it, so the component can crop the frame away.
- */
 export const patientPromiseContent: PatientPromiseContent = {
   title: "We get every patient where they need to go.",
   cta: { label: "Plan a Ride", href: "/#request" },
