@@ -1,7 +1,7 @@
 import type { BookingContent } from "../types";
 
 /**
- * One field list drives both services; `services` narrows a field to one of them.
+ * One field list drives every service; `services` narrows a field to some of them.
  * Fields with no `services` key appear for every service.
  */
 export const bookingContent: BookingContent = {
@@ -12,10 +12,11 @@ export const bookingContent: BookingContent = {
   serviceField: {
     name: "service",
     label: "Services Needed",
-    placeholder: "Medical Ride / Medication Delivery",
+    placeholder: "Medical Ride / Medication Delivery / School Transportation",
     options: [
       { id: "medical-ride", label: "Medical Ride" },
       { id: "medication-delivery", label: "Medication Delivery" },
+      { id: "school-transportation", label: "School Transportation" },
     ],
   },
   fields: [
@@ -30,7 +31,7 @@ export const bookingContent: BookingContent = {
       placeholder: "Jessica",
       type: "text",
       width: "full",
-      services: ["medical-ride"],
+      services: ["medical-ride", "school-transportation"],
     },
     {
       name: "recipientName",
@@ -51,7 +52,7 @@ export const bookingContent: BookingContent = {
       placeholder: "Ambulatory / Wheelchair / Stretcher",
       type: "select",
       options: ["Ambulatory", "Wheelchair", "Stretcher"],
-      services: ["medical-ride"],
+      services: ["medical-ride", "school-transportation"],
     },
     {
       name: "prescription",
@@ -67,7 +68,7 @@ export const bookingContent: BookingContent = {
       type: "radio",
       width: "full",
       options: ["Yes", "No"],
-      services: ["medical-ride"],
+      services: ["medical-ride", "school-transportation"],
     },
 
     {

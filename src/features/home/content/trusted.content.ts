@@ -2,7 +2,7 @@ import type { TrustedContent } from "../types";
 
 export const trustedContent: TrustedContent = {
   highlight: "Trusted",
-  heading: "by school districts and healthcare partners across 7 states.",
+  heading: "by school districts and healthcare partners across states.",
   partners: [
     {
       id: "roanoke",

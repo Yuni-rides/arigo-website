@@ -11,11 +11,13 @@ import { StoriesSection } from "./stories-section";
 import { TestimonialsSection } from "./testimonials-section";
 import { TripsSection } from "./trips-section";
 import { WhyChoosingSection } from "./why-choosing-section";
+import { TrustedSection } from "./trusted-section";
 
 export function HomeView() {
   return (
     <>
       <HeroSection />
+      <TrustedSection/>
       <TripsSection />
       <RequestCtaSection />
       <AreasSection />

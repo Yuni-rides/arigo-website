@@ -20,7 +20,7 @@ export const footerColumns: { heading: string; items: NavItem[] }[] = [
     heading: "Our Services",
     // The trips we cover - every one of them opens the services page.
     items: [
-      { label: "Dialysis", href: "/services" },
+      { label: "School Transportation", href: "/services" },
       { label: "Radiation & chemotherapy", href: "/services" },
       { label: "Physical therapy", href: "/services" },
       { label: "Doctor and dental visits", href: "/services" },
@@ -62,5 +62,6 @@ export const appLinks = {
 
 export const footerBottom = {
   copyright: (year: number) => `${year} Arigo. All rights reserved.`,
-  tagline: "Proudly providing NEMT and delivery services across California and Washington.",
+  tagline:
+    "Proudly providing Transportation services across California and Washington.",
 };

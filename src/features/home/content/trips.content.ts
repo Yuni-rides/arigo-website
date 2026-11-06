@@ -4,9 +4,12 @@ export const tripsContent: TripsContent = {
   title: "Trips we cover",
   trips: [
     {
-      id: "dialysis",
-      label: "Dialysis",
-      image: { src: "/images/trips1.png", alt: "An Arigo driver walking an older passenger to the vehicle" },
+      id: "school-transportation",
+      label: "School Transportation",
+      image: {
+        src: "/images/school_districts.png",
+        alt: "An Arigo driver helping a student in a wheelchair outside a school",
+      },
     },
     {
       id: "radiation",

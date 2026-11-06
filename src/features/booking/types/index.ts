@@ -1,4 +1,4 @@
-export type ServiceId = "medical-ride" | "medication-delivery";
+export type ServiceId = "medical-ride" | "medication-delivery" | "school-transportation";
 
 export type FieldType = "text" | "email" | "tel" | "datetime-local" | "select" | "radio";
 

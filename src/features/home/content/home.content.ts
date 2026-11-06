@@ -19,7 +19,7 @@ export const heroContent: HeroContent = {
       },
       title: "Every Ride, With",
       highlight: "Gratitude.",
-      description: "Technology-driven, caring transportation service trusted by families across the U.S.",
+      description: "Technology-driven, caring school transportation service trusted by families across the U.S",
       ...defaultCtas,
     },
     {

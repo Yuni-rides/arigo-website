@@ -1,7 +1,7 @@
 import type { RequestCtaContent } from "../types";
 
 export const requestCtaContent: RequestCtaContent = {
-  title: "Request a Non-Emergency Medical Transportation Service Online",
+  title: "Request a Transportation Service Online",
   cta: { label: "Request Transportation", href: "/#request" },
   photo: {
     src: "/images/arigo-request-medical-transportation-banner.png",
