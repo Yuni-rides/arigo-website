@@ -13,17 +13,20 @@ export const patientPromiseContent: PatientPromiseContent = {
     },
     {
       src: "/images/arigo-patient-mobility-solutions.png",
-      alt: "Two Arigo attendants loading a patient on a stretcher into a van",
-      width: 470,
-      height: 505,
-      content: { x: 58, y: 69, width: 354, height: 389 },
+      alt: "An Arigo driver helping a schoolboy with his backpack into the van outside his home",
+      width: 388,
+      height: 388,
+      // This photo ships without the white frame, so it is only centre-cropped
+      // to the collage's portrait ratio.
+      content: { x: 17, y: 0, width: 354, height: 388 },
     },
     {
       src: "/images/arigo-medical-transport-and-delivery.png",
-      alt: "An Arigo attendant pushing a passenger in a wheelchair up the vehicle ramp",
-      width: 440,
-      height: 504,
-      content: { x: 58, y: 69, width: 354, height: 388 },
+      alt: "An Arigo driver kneeling to greet a schoolgirl and her mother beside the vehicle",
+      width: 354,
+      height: 388,
+      // Unframed photo - the whole file is the content box.
+      content: { x: 0, y: 0, width: 354, height: 388 },
     },
     {
       src: "/images/arigo-reliable-patient-transport.png",
