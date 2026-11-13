@@ -20,6 +20,7 @@ const categories: BlogCategory[] = [
   "Drivers",
   "Healthcare Partners",
   "Medication Delivery",
+  "School Transportation",
 ];
 
 export const blogListContent: BlogListContent = {

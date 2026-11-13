@@ -11,12 +11,16 @@ import { medicalRideLateOrNoShow } from "./medical-ride-late-or-no-show";
 import { nonEmergencyFacilityToFacilityTransfers } from "./non-emergency-facility-to-facility-transfers";
 import { questionsDialysisCentersAskTransportationPartner } from "./questions-dialysis-centers-ask-transportation-partner";
 import { ridesToChemotherapyAndRadiation } from "./rides-to-chemotherapy-and-radiation";
+import { whatADriverShouldKnowBeforePickingUpAChildWithSpecialNeeds } from "./what-a-driver-should-know-before-picking-up-a-child-with-special-needs";
+import { whenAFosterPlacementChangesMidYear } from "./when-a-foster-placement-changes-mid-year";
 
 /**
  * Posts that ship with their own copy, newest first. The detail route serves these
  * bodies, and the listing builds one card per article.
  */
 export const articles: BlogArticle[] = [
+  whatADriverShouldKnowBeforePickingUpAChildWithSpecialNeeds,
+  whenAFosterPlacementChangesMidYear,
   doesMedicaidCoverRidesToDoctor,
   homeOxygenDeliveryWhatFamiliesShouldKnow,
   nonEmergencyFacilityToFacilityTransfers,
