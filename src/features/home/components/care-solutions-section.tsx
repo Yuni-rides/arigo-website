@@ -16,7 +16,7 @@ export function CareSolutionsSection() {
     >
       {/* Soft blue shapes + dot grid from the design */}
       <Image
-        src="/images/arigo-care-solutions-transportation.png"
+        src="/images/arigo-care-solutions-transportation.webp"
         alt=""
         aria-hidden
         fill

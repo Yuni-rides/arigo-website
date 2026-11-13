@@ -2,7 +2,7 @@ import type { CoreValue } from "../types";
 
 /** Placeholder image for every card until the designer delivers individual assets. */
 const placeholderImage = {
-  src: "/images/safety-first.png",
+  src: "/images/safety-first.webp",
   alt: "An Arigo driver fastening the seat belt of a smiling child",
 };
 

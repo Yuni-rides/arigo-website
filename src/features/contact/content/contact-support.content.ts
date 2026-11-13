@@ -5,7 +5,7 @@ export const contactSupportContent: ContactSupportContent = {
   description:
     "Tell us about the ride or delivery you need. Our team will contact you to confirm the details.",
   headerArt: {
-    src: "/images/arigo-book-ride-header.png",
+    src: "/images/arigo-book-ride-header.webp",
     alt: "Illustration of an Arigo wheelchair-accessible van parked outside a hospital",
     width: 520,
     height: 140,
@@ -15,7 +15,7 @@ export const contactSupportContent: ContactSupportContent = {
     suffix: "office contact details",
     notice: "Arigo provides non-emergency transportation only. In an emergency, please call 911.",
     art: {
-      src: "/images/arigo-san-francisco-contact-section.png",
+      src: "/images/arigo-san-francisco-contact-section.webp",
       width: 400,
       height: 200,
       alt: "Golden Gate Bridge illustration",

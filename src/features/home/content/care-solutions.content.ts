@@ -17,7 +17,7 @@ export const careSolutionsContent: CareSolutionsContent = {
       accent: "primary",
       cta: { label: "Learn more", href: "/services" },
       image: {
-        src: "/images/arigo-medical-transportation-services.png",
+        src: "/images/arigo-medical-transportation-services.webp",
         alt: "An Arigo driver helping a passenger in a wheelchair onto the vehicle lift",
       },
     },
@@ -33,7 +33,7 @@ export const careSolutionsContent: CareSolutionsContent = {
       accent: "secondary",
       cta: { label: "Learn more", href: "/services" },
       image: {
-        src: "/images/arigo-transport-and-medical-delivery.png",
+        src: "/images/arigo-transport-and-medical-delivery.webp",
         alt: "An Arigo courier handing a medication package to a customer at her door",
       },
     },
@@ -49,7 +49,7 @@ export const careSolutionsContent: CareSolutionsContent = {
       accent: "primary",
       cta: { label: "Reserve a Ride", href: "/#request" },
       image: {
-        src: "/images/driverBanner2.png",
+        src: "/images/driverBanner2.webp",
         alt: "An Arigo driver helping a student with her backpack into the car",
       },
     },

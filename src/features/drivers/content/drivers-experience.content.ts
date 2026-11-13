@@ -23,7 +23,7 @@ export const driversExperienceContent: DriverExperience[] = [
     id: "ride-delivery",
     title: "Streamline end-to-end ride delivery",
     image: {
-      src: "/images/arigo-driver-experience-1.png",
+      src: "/images/arigo-driver-experience-1.webp",
       alt: "Driver behind the wheel with a navigation device",
     },
     points: [
@@ -46,7 +46,7 @@ export const driversExperienceContent: DriverExperience[] = [
     id: "care",
     title: "Safe, supported care on every ride",
     image: {
-      src: "/images/arigo-driver-experience-2.png",
+      src: "/images/arigo-driver-experience-2.webp",
       alt: "Arigo driver experience — passenger care and safety",
     },
     points: [
@@ -70,7 +70,7 @@ export const driversExperienceContent: DriverExperience[] = [
     id: "earnings",
     title: "Earn on your own terms",
     image: {
-      src: "/images/arigo-driver-experience-3.png",
+      src: "/images/arigo-driver-experience-3.webp",
       alt: "Arigo driver experience — flexible work and earnings",
     },
     points: [

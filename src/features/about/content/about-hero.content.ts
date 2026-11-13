@@ -7,7 +7,7 @@ export const aboutHeroContent: PageHeroProps = {
   ],
   description: "Arigo helps people get to their medical appointments when getting there isn’t always easy—and get home with the same care and attention.",
   image: {
-    src: "/images/aboutBanner.png",
+    src: "/images/aboutBanner.webp",
     alt: "An Arigo driver helping a child into a van while a mother and daughter look on",
   },
 };

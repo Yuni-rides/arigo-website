@@ -14,7 +14,7 @@ export const driversHeroContent: DriversHeroContent = {
   description: "Confident drivers, backed by tools that give them full transparency and support.",
   cta: { label: "Get started", href: "/careers" },
   images: {
-    back: { src: "/images/driverBanner1.png", alt: "Two Arigo drivers standing beside a vehicle" },
-    front: { src: "/images/driverBanner2.png", alt: "An Arigo driver helping a student into the car" },
+    back: { src: "/images/driverBanner1.webp", alt: "Two Arigo drivers standing beside a vehicle" },
+    front: { src: "/images/driverBanner2.webp", alt: "An Arigo driver helping a student into the car" },
   },
 };

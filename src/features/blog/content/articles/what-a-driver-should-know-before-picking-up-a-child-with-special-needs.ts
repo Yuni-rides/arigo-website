@@ -15,7 +15,7 @@ export const whatADriverShouldKnowBeforePickingUpAChildWithSpecialNeeds: BlogArt
     "school transportation for children with autism",
   ],
   banner: {
-    src: "/images/what-a-driver-should-know-before-picking-up-a-child-with-special-needs.png",
+    src: "/images/what-a-driver-should-know-before-picking-up-a-child-with-special-needs.webp",
     alt: "A driver kneeling to greet a boy wearing ear defenders and holding a picture card beside the van door, with his mother alongside",
   },
   intro: "Most drivers can drive. That's not the question.",

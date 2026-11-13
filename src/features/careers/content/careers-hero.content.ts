@@ -7,7 +7,7 @@ export const careersHeroContent: PageHeroProps = {
   description:
     "Join a team that gets kids where they need to be safely, on time, every day. Discover a career built on care.",
   image: {
-    src: "/images/careerBanner.png",
+    src: "/images/careerBanner.webp",
     alt: "Arigo drivers in orange uniforms talking and laughing together",
   },
 };

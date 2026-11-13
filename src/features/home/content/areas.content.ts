@@ -26,7 +26,7 @@ export const areasContent: AreasContent = {
       ],
       href: "/areas/washington",
       // The two files are named the wrong way round: california.png is the Seattle skyline.
-      photo: { src: "/images/california.png", width: 563, height: 352 },
+      photo: { src: "/images/california.webp", width: 563, height: 352 },
     },
     {
       id: "california",
@@ -51,7 +51,7 @@ export const areasContent: AreasContent = {
         "Oakland",
       ],
       href: "/areas/california",
-      photo: { src: "/images/washington.png", width: 563, height: 352 },
+      photo: { src: "/images/washington.webp", width: 563, height: 352 },
     },
   ],
 };

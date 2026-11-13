@@ -15,7 +15,7 @@ export const ridesToChemotherapyAndRadiation: BlogArticle = {
     "rides to radiation treatment",
   ],
   banner: {
-    src: "/images/rides-to-chemotherapy-and-radiation.png",
+    src: "/images/rides-to-chemotherapy-and-radiation.webp",
     alt: "A patient arriving for a treatment appointment with a driver helping at the vehicle door",
   },
   intro:

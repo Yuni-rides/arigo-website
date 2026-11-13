@@ -16,7 +16,7 @@ export const howToCheckMedicalTransportationCompanyLicense: BlogArticle = {
     "medical transport insurance",
   ],
   banner: {
-    src: "/images/how-to-check-medical-transportation-company-license.png",
+    src: "/images/how-to-check-medical-transportation-company-license.webp",
     alt: "A family checking a transportation company's paperwork before booking a ride",
   },
   intro:

@@ -15,7 +15,7 @@ export const nonEmergencyFacilityToFacilityTransfers: BlogArticle = {
     "nursing home to hospital transport",
   ],
   banner: {
-    src: "/images/non-emergency-facility-to-facility-transfers.png",
+    src: "/images/non-emergency-facility-to-facility-transfers.webp",
     alt: "An attendant moving a patient on a stretcher between a facility entrance and a transport vehicle",
   },
   intro:

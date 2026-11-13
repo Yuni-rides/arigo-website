@@ -15,7 +15,7 @@ export const doesMedicaidCoverRidesToDoctor: BlogArticle = {
     "Apple Health NEMT Washington",
   ],
   banner: {
-    src: "/images/does-medicaid-cover-rides-to-doctor.png",
+    src: "/images/does-medicaid-cover-rides-to-doctor.webp",
     alt: "A patient checking their insurance card before a medical appointment",
   },
   intro:

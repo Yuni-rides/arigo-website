@@ -80,13 +80,13 @@ export const bookingContent: BookingContent = {
     },
   ],
   photo: {
-    src: "/images/arigo-booking-side-banner.png",
+    src: "/images/arigo-booking-side-banner.webp",
     alt: "An Arigo attendant smiling with a passenger in a wheelchair beside the van",
     width: 474,
     height: 1130,
   },
   headerArt: {
-    src: "/images/arigo-book-ride-header.png",
+    src: "/images/arigo-book-ride-header.webp",
     alt: "Illustration of an Arigo wheelchair-accessible van parked outside a hospital",
     width: 442,
     height: 147,

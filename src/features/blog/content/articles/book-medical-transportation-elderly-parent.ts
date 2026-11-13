@@ -15,7 +15,7 @@ export const bookMedicalTransportationElderlyParent: BlogArticle = {
     "NEMT for elderly riders",
   ],
   banner: {
-    src: "/images/book-medical-transportation-elderly-parent.png",
+    src: "/images/book-medical-transportation-elderly-parent.webp",
     alt: "An adult daughter helping her mother into a vehicle before a doctor's appointment",
   },
   intro:

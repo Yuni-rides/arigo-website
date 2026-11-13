@@ -11,7 +11,7 @@ export const homeOxygenDeliveryWhatFamiliesShouldKnow: BlogArticle = {
     "Home oxygen delivery explained: how an oxygen delivery service works, equipment types, portable oxygen refill, who pays, and what to ask before delivery.",
   keywords: ["home oxygen delivery", "oxygen delivery service", "portable oxygen refill"],
   banner: {
-    src: "/images/home-oxygen-delivery-what-families-should-know.png",
+    src: "/images/home-oxygen-delivery-what-families-should-know.webp",
     alt: "A family member checking a home oxygen concentrator beside an older patient",
   },
   intro:

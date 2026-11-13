@@ -4,7 +4,7 @@ export const requestCtaContent: RequestCtaContent = {
   title: "Request a Transportation Service Online",
   cta: { label: "Request Transportation", href: "/#request" },
   photo: {
-    src: "/images/arigo-request-medical-transportation-banner.png",
+    src: "/images/arigo-request-medical-transportation-banner.webp",
     alt: "An Arigo dispatcher taking a booking call",
     width: 539,
     height: 538,

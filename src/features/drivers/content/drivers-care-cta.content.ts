@@ -21,11 +21,11 @@ export const driversCareCtaContent: DriversCareCtaContent = {
   },
   images: {
     front: {
-      src: "/images/arigo-drive-with-care-cta.png",
+      src: "/images/arigo-drive-with-care-cta.webp",
       alt: "Arigo driver high-fiving a young passenger",
     },
     back: {
-      src: "/images/arigo-faq-support-banner.png",
+      src: "/images/arigo-faq-support-banner.webp",
       alt: "Arigo driver beside a vehicle at sunset",
     },
   },

@@ -2,7 +2,7 @@ import type { CareerJob } from "../types";
 
 export const careerJobsContent = {
   banner: {
-    src: "/images/careerBanner.png",
+    src: "/images/careerBanner.webp",
     alt: "Arigo transportation team",
   },
   description:

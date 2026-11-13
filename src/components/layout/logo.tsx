@@ -8,7 +8,7 @@ export function Logo({ className, priority = false }: { className?: string; prio
   return (
     <Link href="/" aria-label={`${siteConfig.name} home`} className={cn("inline-flex shrink-0", className)}>
       <Image
-        src="/images/logo.png"
+        src="/images/logo.webp"
         alt={`${siteConfig.name} - ${siteConfig.tagline}`}
         width={175}
         height={94}

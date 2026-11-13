@@ -12,7 +12,7 @@ export const privacyContent: LegalContent = {
   description: "How Arigo collects, uses, and protects your information.",
   tocTitle: "On this Page",
   banner: {
-    src: "/images/policyBanner.png",
+    src: "/images/policyBanner.webp",
     alt: "An Arigo attendant helping an older passenger out of the vehicle",
   },
   sections: [

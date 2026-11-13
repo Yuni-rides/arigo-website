@@ -14,7 +14,7 @@ export const heroContent: HeroContent = {
       id: "safety",
       tab: "Safety",
       image: {
-        src: "/images/homeBanner1.png",
+        src: "/images/homeBanner1.webp",
         alt: "A smiling child wearing a seat belt in the back seat of an Arigo ride",
       },
       title: "Every Ride, With",
@@ -25,7 +25,7 @@ export const heroContent: HeroContent = {
     {
       id: "ride",
       tab: "Ride",
-      image: { src: "/images/homeBanner2.png", alt: "An Arigo passenger enjoying a comfortable ride" },
+      image: { src: "/images/homeBanner2.webp", alt: "An Arigo passenger enjoying a comfortable ride" },
       title: "Comfort In",
       highlight: "Every Mile.",
       description: "Book a ride in seconds and travel with drivers who put your care first.",
@@ -34,7 +34,7 @@ export const heroContent: HeroContent = {
     {
       id: "heroes",
       tab: "Our Heros",
-      image: { src: "/images/homeBanner3.png", alt: "An Arigo driver welcoming a passenger" },
+      image: { src: "/images/homeBanner3.webp", alt: "An Arigo driver welcoming a passenger" },
       title: "Drivers Who",
       highlight: "Care.",
       description: "Vetted, trained, and trusted - the people behind every safe Arigo journey.",
@@ -43,7 +43,7 @@ export const heroContent: HeroContent = {
     {
       id: "community",
       tab: "Arigo Community",
-      image: { src: "/images/homeBanner4.png", alt: "Families across the U.S. riding with Arigo" },
+      image: { src: "/images/homeBanner4.webp", alt: "Families across the U.S. riding with Arigo" },
       title: "Stronger",
       highlight: "Together.",
       description: "Join a growing community of riders and drivers building safer roads for everyone.",

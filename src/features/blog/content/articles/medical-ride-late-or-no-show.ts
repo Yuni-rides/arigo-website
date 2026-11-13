@@ -16,7 +16,7 @@ export const medicalRideLateOrNoShow: BlogArticle = {
     "medical transportation complaint",
   ],
   banner: {
-    src: "/images/medical-ride-late-or-no-show.png",
+    src: "/images/medical-ride-late-or-no-show.webp",
     alt: "A patient waiting outside with a phone, watching for a ride that has not arrived",
   },
   intro:

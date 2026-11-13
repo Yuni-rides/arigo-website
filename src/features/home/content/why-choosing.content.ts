@@ -9,11 +9,11 @@ export const whyChoosingContent: WhyChoosingContent = {
   ],
   images: {
     front: {
-      src: "/images/whyChoosing1.png",
+      src: "/images/whyChoosing1.webp",
       alt: "An Arigo courier unloading medical supplies from the van outside a facility",
     },
     back: {
-      src: "/images/WhyChoosing2.png",
+      src: "/images/WhyChoosing2.webp",
       alt: "Two Arigo drivers beside a wheelchair-accessible van with the ramp down",
     },
   },

@@ -7,10 +7,10 @@ export interface CareService {
 }
 
 const icons = {
-  driver: "/images/driver-badge-icon.png",
-  wheelchair: "/images/wheelchair-ride-icon.png",
-  route: "/images/route-planning-icon.png",
-  compassion: "/images/compassionate-care-icon.png",
+  driver: "/images/driver-badge-icon.webp",
+  wheelchair: "/images/wheelchair-ride-icon.webp",
+  route: "/images/route-planning-icon.webp",
+  compassion: "/images/compassionate-care-icon.webp",
 };
 
 export const careServicesContent = {
@@ -32,7 +32,7 @@ export const careServicesContent = {
         { icon: icons.compassion, label: "Compassionate, hands-on assistance" },
       ],
       image: {
-        src: "/images/arigo-nemt-driver-service.png",
+        src: "/images/arigo-nemt-driver-service.webp",
         alt: "An Arigo driver standing beside a wheelchair-accessible van",
       },
     },
@@ -46,7 +46,7 @@ export const careServicesContent = {
         { icon: icons.compassion, label: "Patient, unhurried pickups" },
       ],
       image: {
-        src: "/images/arigo-dialysis-center-ride.png",
+        src: "/images/arigo-dialysis-center-ride.webp",
         alt: "An Arigo attendant helping a patient into the vehicle at a treatment centre",
       },
     },
@@ -60,7 +60,7 @@ export const careServicesContent = {
         { icon: icons.compassion, label: "Settled safely at the front door" },
       ],
       image: {
-        src: "/images/arigo-hospital-discharge-ride.png",
+        src: "/images/arigo-hospital-discharge-ride.webp",
         alt: "An Arigo attendant bringing a patient home after a hospital stay",
       },
     },

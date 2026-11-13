@@ -2,7 +2,7 @@ import type { StoriesContent } from "../types";
 
 /** All stories share story1.png until the remaining assets arrive. */
 const image = {
-  src: "/images/story1.png",
+  src: "/images/story1.webp",
   alt: "A grandmother and granddaughter smiling in front of an Arigo bus",
 };
 

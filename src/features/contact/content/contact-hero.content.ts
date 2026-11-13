@@ -6,7 +6,7 @@ export const contactHeroContent: PageHeroProps = {
   description:
     "Whether you are a parent, a district, or someone ready to drive with us, we are here to help, every step of the way.",
   image: {
-    src: "/images/contactBanner.png",
+    src: "/images/contactBanner.webp",
     alt: "Arigo support team members wearing headsets and helping callers",
   },
 };

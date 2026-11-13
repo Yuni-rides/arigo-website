@@ -15,7 +15,7 @@ export const whenAFosterPlacementChangesMidYear: BlogArticle = {
     "foster placement change school",
   ],
   banner: {
-    src: "/images/when-a-foster-placement-changes-mid-year.png",
+    src: "/images/when-a-foster-placement-changes-mid-year.webp",
     alt: "A caregiver walking a young girl with a backpack to a waiting van outside her school",
   },
   intro:

@@ -34,7 +34,7 @@ export const safetySectionContent: SafetySectionContent = {
         "Comfortable, clean vehicles",
       ]),
       image: {
-        src: "/images/arigo-ambulatory-ride-service.png",
+        src: "/images/arigo-ambulatory-ride-service.webp",
         alt: "Driver assisting an elderly patient into the vehicle",
       },
     },
@@ -48,7 +48,7 @@ export const safetySectionContent: SafetySectionContent = {
         "Trained and caring drivers",
       ]),
       image: {
-        src: "/images/arigo-wheelchair-secure-ride.png",
+        src: "/images/arigo-wheelchair-secure-ride.webp",
         alt: "Patient being assisted into a wheelchair accessible vehicle",
       },
     },
@@ -62,7 +62,7 @@ export const safetySectionContent: SafetySectionContent = {
         "Smooth and comfortable ride",
       ]),
       image: {
-        src: "/images/arigo-stretcher-transport-service.png",
+        src: "/images/arigo-stretcher-transport-service.webp",
         alt: "Stretcher transport vehicle with attendants",
       },
     },
@@ -76,7 +76,7 @@ export const safetySectionContent: SafetySectionContent = {
         "On-time pickups, every session",
       ]),
       image: {
-        src: "/images/arigo-dialysis-boarding-assistance.png",
+        src: "/images/arigo-dialysis-boarding-assistance.webp",
         alt: "Driver helping a dialysis patient board the vehicle",
       },
     },

@@ -10,7 +10,7 @@ export const dayInTheLifeMedicalTransportationDriver: BlogArticle = {
   metaDescription: "What does a NEMT driver do all day?",
   keywords: ["what does a NEMT driver do"],
   banner: {
-    src: "/images/day-in-the-life-medical-transportation-driver.png",
+    src: "/images/day-in-the-life-medical-transportation-driver.webp",
     alt: "An Arigo driver walking a passenger from the vehicle to a clinic entrance",
   },
   intro:

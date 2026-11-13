@@ -16,7 +16,7 @@ export const gettingToDialysisWithoutACar: BlogArticle = {
     "how to get to dialysis appointments",
   ],
   banner: {
-    src: "/images/getting-to-dialysis-without-a-car.png",
+    src: "/images/getting-to-dialysis-without-a-car.webp",
     alt: "A dialysis patient being helped into a wheelchair-accessible vehicle outside a treatment center",
   },
   intro:

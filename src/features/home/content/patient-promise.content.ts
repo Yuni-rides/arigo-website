@@ -5,14 +5,14 @@ export const patientPromiseContent: PatientPromiseContent = {
   cta: { label: "Plan a Ride", href: "/#request" },
   photos: [
     {
-      src: "/images/arigo-patient-transportation-services.png",
+      src: "/images/arigo-patient-transportation-services.webp",
       alt: "An Arigo driver walking a passenger away from the van",
       width: 450,
       height: 483,
       content: { x: 48, y: 59, width: 354, height: 387 },
     },
     {
-      src: "/images/arigo-patient-mobility-solutions.png",
+      src: "/images/arigo-patient-mobility-solutions.webp",
       alt: "An Arigo driver helping a schoolboy with his backpack into the van outside his home",
       width: 388,
       height: 388,
@@ -21,7 +21,7 @@ export const patientPromiseContent: PatientPromiseContent = {
       content: { x: 17, y: 0, width: 354, height: 388 },
     },
     {
-      src: "/images/arigo-medical-transport-and-delivery.png",
+      src: "/images/arigo-medical-transport-and-delivery.webp",
       alt: "An Arigo driver kneeling to greet a schoolgirl and her mother beside the vehicle",
       width: 354,
       height: 388,
@@ -29,7 +29,7 @@ export const patientPromiseContent: PatientPromiseContent = {
       content: { x: 0, y: 0, width: 354, height: 388 },
     },
     {
-      src: "/images/arigo-reliable-patient-transport.png",
+      src: "/images/arigo-reliable-patient-transport.webp",
       alt: "An Arigo courier handing a medication package to a customer at his door",
       width: 440,
       height: 504,

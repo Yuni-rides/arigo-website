@@ -53,7 +53,7 @@ export function BlogDetailHero({ slug, title, author, date, banner }: BlogArticl
               a width that is itself derived from this image, which collapses the clickable area.
             */}
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt={siteConfig.name}
               width={175}
               height={94}

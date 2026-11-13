@@ -24,7 +24,7 @@ export function StoriesCarousel({ eyebrow, watchLabel, stories }: StoriesContent
   return (
     <div className="relative overflow-hidden rounded-[22px] bg-[#FAF6F0] px-6 pt-10 pb-24 sm:px-12 sm:pt-12 lg:px-14 lg:py-16">
       <Image
-        src="/images/story_vector.png"
+        src="/images/story_vector.webp"
         alt=""
         aria-hidden
         width={300}

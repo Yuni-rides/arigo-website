@@ -11,12 +11,12 @@ export const whyTrustedContent = {
   photos: {
     // Both assets ship with a thin white frame, cropped away in the component.
     back: {
-      src: "/images/arigo-trusted-driver-and-patient.png",
+      src: "/images/arigo-trusted-driver-and-patient.webp",
       alt: "An Arigo driver welcoming an older couple at the van door",
       aspectRatio: "160 / 140",
     },
     front: {
-      src: "/images/arigo-professional-driver.png",
+      src: "/images/arigo-professional-driver.webp",
       alt: "An Arigo driver standing beside the van",
       aspectRatio: "165 / 205",
     },

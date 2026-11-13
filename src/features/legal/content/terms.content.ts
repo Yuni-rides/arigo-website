@@ -12,7 +12,7 @@ export const termsContent: LegalContent = {
   description: "The terms that apply when you book a ride or a delivery with Arigo.",
   tocTitle: "On this Page",
   banner: {
-    src: "/images/policyBanner.png",
+    src: "/images/policyBanner.webp",
     alt: "An Arigo attendant helping an older passenger out of the vehicle",
   },
   sections: [

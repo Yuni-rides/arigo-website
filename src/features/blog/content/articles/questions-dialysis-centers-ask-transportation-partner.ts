@@ -15,7 +15,7 @@ export const questionsDialysisCentersAskTransportationPartner: BlogArticle = {
     "NEMT for dialysis centers",
   ],
   banner: {
-    src: "/images/questions-dialysis-centers-ask-transportation-partner.png",
+    src: "/images/questions-dialysis-centers-ask-transportation-partner.webp",
     alt: "A clinic coordinator talking with a driver outside a dialysis center",
   },
   intro:

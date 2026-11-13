@@ -15,7 +15,7 @@ export const becomeAMedicalTransportationDriver: BlogArticle = {
     "medical transportation driver requirements",
   ],
   banner: {
-    src: "/images/become-a-medical-transportation-driver.png",
+    src: "/images/become-a-medical-transportation-driver.webp",
     alt: "An Arigo driver helping a passenger into a vehicle before an appointment",
   },
   intro:

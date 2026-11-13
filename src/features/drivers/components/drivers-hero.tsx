@@ -15,7 +15,7 @@ export function DriversHero() {
   return (
     <section className="relative isolate overflow-hidden bg-background pt-28 pb-20 lg:pt-12 lg:pb-24">
       <Image
-        src="/images/layer.png"
+        src="/images/layer.webp"
         alt=""
         aria-hidden
         width={1440}

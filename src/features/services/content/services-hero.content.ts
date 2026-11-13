@@ -5,7 +5,7 @@ export const servicesHeroContent: ServicesHeroContent = {
   description:
     "Reliable, technology-powered transportation services built to support children, families, schools, and healthcare communities.",
   image: {
-    src: "/images/serviceBanner.png",
+    src: "/images/serviceBanner.webp",
     alt: "An Arigo driver helping a child into a van while a mother and daughter look on",
   },
   primaryCta: { label: "Request a Ride", href: "/#request" },

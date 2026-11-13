@@ -17,7 +17,7 @@ export const driversTestimonialsContent: Testimonial[] = [
     author: "Linda Ortiz",
     role: "Transportation Director, Riverside Unified",
     image: {
-      src: "/images/arigo-client-testimonial-1.png",
+      src: "/images/arigo-client-testimonial-1.webp",
       alt: "Linda Ortiz",
     },
   },
@@ -28,7 +28,7 @@ export const driversTestimonialsContent: Testimonial[] = [
     author: "Michael Chang",
     role: "Operations Head, Logistics Co.",
     image: {
-      src: "/images/arigo-client-testimonial-2.png",
+      src: "/images/arigo-client-testimonial-2.webp",
       alt: "Michael Chang",
     },
   },
@@ -39,7 +39,7 @@ export const driversTestimonialsContent: Testimonial[] = [
     author: "Sarah Jenkins",
     role: "Fleet Manager, Care Trans",
     image: {
-      src: "/images/arigo-client-testimonial-3.png",
+      src: "/images/arigo-client-testimonial-3.webp",
       alt: "Sarah Jenkins",
     },
   },
