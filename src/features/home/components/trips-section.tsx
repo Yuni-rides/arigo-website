@@ -8,7 +8,7 @@ export function TripsSection() {
   const { title, trips } = tripsContent;
 
   return (
-    <section id="trips" className="scroll-mt-24 bg-background py-24">
+    <section id="trips" className="scroll-mt-24 bg-background md:py-24">
       <Container>
         <Reveal>
           <h2 className="text-center text-3xl font-medium text-brand-secondary sm:text-[52px]">{title}</h2>

@@ -12,7 +12,6 @@ export function AreasSection() {
       id="areas"
       className="relative scroll-mt-24 overflow-hidden bg-[#DB6650] py-20 text-white sm:py-24"
     >
-      {/* Dark glow along the bottom edge (Figma) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 -bottom-40 h-72 bg-[radial-gradient(ellipse_at_center,rgb(21_29_50/0.75),transparent_65%)]"
@@ -29,7 +28,11 @@ export function AreasSection() {
           <p className="mt-10 text-lg leading-relaxed text-white/90 sm:text-xl">{description}</p>
         </Reveal>
 
-        <Stagger className="mt-20 grid gap-10 sm:grid-cols-2 lg:gap-28" stagger={0.1}>
+        {/*
+          Two-up only from `lg`. Below that a side-by-side card is narrower than a
+          full-width card on a phone, which squeezes the city list until names clip.
+        */}
+        <Stagger className="mt-20 grid gap-10 lg:grid-cols-2 lg:gap-28" stagger={0.1}>
           {areas.map((area) => (
             <RevealItem key={area.id} className="h-full">
               <AreaCard {...area} ctaLabel={cardCtaLabel} />

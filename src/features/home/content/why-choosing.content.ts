@@ -13,7 +13,7 @@ export const whyChoosingContent: WhyChoosingContent = {
       alt: "An Arigo courier unloading medical supplies from the van outside a facility",
     },
     back: {
-      src: "/images/WhyChoosing2.webp",
+      src: "/images/whyChoosing2.webp",
       alt: "Two Arigo drivers beside a wheelchair-accessible van with the ramp down",
     },
   },

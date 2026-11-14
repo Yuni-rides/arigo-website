@@ -34,12 +34,18 @@ export function AreaCard({ state, cities, href, photo, ctaLabel }: ServiceArea &
       </div>
 
       {/* White panel rides up over the photo so its rounded top corners show the city behind them */}
-      <div className="relative -mt-6 flex flex-1 flex-col rounded-t-[24px] bg-white px-7 pt-10 pb-6">
-        <ul className="grid grid-cols-3 gap-x-3 gap-y-6">
+      <div className="relative -mt-6 flex flex-1 flex-col rounded-t-[24px] bg-white px-5 pt-10 pb-6 sm:px-7">
+        {/*
+          The column count follows the card's own width, not the viewport: the cards go
+          two-up partway through the range, so a breakpoint here would put three columns
+          in a 276px card and clip names like "Federal Way". `auto-fit` lands on three
+          columns at the design's width and drops to two, then one, as the card narrows.
+        */}
+        <ul className="grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-x-3 gap-y-5 xl:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] xl:gap-y-6">
           {cities.map((city, i) => (
-            <li key={`${city}-${i}`} className="flex items-center gap-3 text-[18px]">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-brand-primary-soft">
-                <MapPin className="size-5 fill-brand-primary text-white" aria-hidden />
+            <li key={`${city}-${i}`} className="flex items-center gap-2.5 text-[15px] xl:gap-3 xl:text-[18px]">
+              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-brand-primary-soft xl:size-10">
+                <MapPin className="size-4 fill-brand-primary text-white xl:size-5" aria-hidden />
               </span>
               {city}
             </li>
