@@ -4,10 +4,10 @@ import type { SafetyFeature, SafetySectionContent } from "../types";
 const ICON_DIR = "/images";
 
 const icons = {
-  transportation: `${ICON_DIR}/transportaionIcon.png`,
-  privacy: `${ICON_DIR}/privacyIcon.png`,
-  flexible: `${ICON_DIR}/FlexibleIcon.png`,
-  trauma: `${ICON_DIR}/traumaIcon.png`,
+  transportation: `${ICON_DIR}/transportaionIcon.webp`,
+  privacy: `${ICON_DIR}/privacyIcon.webp`,
+  flexible: `${ICON_DIR}/FlexibleIcon.webp`,
+  trauma: `${ICON_DIR}/traumaIcon.webp`,
 };
 
 // Figma mein har service ke 4 rows mein yahi 4 icons usi order mein hain

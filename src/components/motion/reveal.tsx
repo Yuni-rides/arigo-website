@@ -11,7 +11,13 @@ type TriggerProps = {
 function triggerProps({ once = true, immediate = false }: TriggerProps) {
   return immediate
     ? { initial: "hidden", animate: "visible" }
-    : { initial: "hidden", whileInView: "visible", viewport: { once, amount: 0.2 } };
+    : /*
+       * `amount: "some"` reveals as soon as any part of the block enters the viewport.
+       * A fraction cannot be used here: a one-column grid on a phone is taller than the
+       * screen, so a threshold like 0.2 asks for more pixels than the viewport has and
+       * never fires, leaving the whole section stuck at opacity 0.
+       */
+      { initial: "hidden", whileInView: "visible", viewport: { once, amount: "some" as const } };
 }
 
 type RevealProps = HTMLMotionProps<"div"> & TriggerProps & { variants?: Variants };

@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 import { careServicesContent } from "../content/care-services.content";
 
-const CARD_CROP = { aspectRatio: "864 / 440" };
 const PHOTO_CROP = { aspectRatio: "405 / 380" };
 
 export function CareServicesSection() {
@@ -38,10 +37,12 @@ export function CareServicesSection() {
           </p>
         </div>
 
-        <div
-          className="mt-12 w-full overflow-hidden rounded-[28px] bg-brand-secondary p-6 sm:p-[3.7%]"
-          style={CARD_CROP}
-        >
+        {/*
+          The 864x440 crop only holds once the copy and the photo sit side by side. In a
+          single column that box is ~175px tall on a phone and `overflow-hidden` cuts the
+          card off mid-list, so below `lg` the card takes the height its content needs.
+        */}
+        <div className="mt-12 w-full overflow-hidden rounded-[28px] bg-brand-secondary p-6 sm:p-[3.7%] lg:aspect-[864/440]">
           <motion.div
             key={active.id}
             initial={{ opacity: 0, y: 12 }}

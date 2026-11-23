@@ -9,7 +9,7 @@ import { audiences } from "../content/audiences.content";
 /** Zig-zag rows: image / copy alternate sides on desktop, stack on mobile. */
 export function AudiencesSection() {
   return (
-    <section id="who-we-serve" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="who-we-serve" className="scroll-mt-24 md:py-20">
       <Container className="space-y-20 lg:space-y-24">
         {audiences.map((item, i) => {
           const imageRight = i % 2 === 1;

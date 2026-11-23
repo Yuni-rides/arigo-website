@@ -16,7 +16,7 @@ export function WhyChoosingSection() {
   const { title, highlight, paragraphs, images } = whyChoosingContent;
 
   return (
-    <section id="why-arigo" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="why-arigo" className="scroll-mt-24 md:py-20">
       <Container>
         {/* Top padding = room for the back image to overflow above the card */}
         <div className="pt-8 lg:pt-14">
